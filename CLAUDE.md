@@ -2,6 +2,12 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## GitHub address (new since 13 Nov 2026)
+
+- **Repo:** https://github.com/mukhrizizraf/ai-learning-dashboard
+- **Live site:** https://mukhrizizraf.github.io/ai-learning-dashboard/
+- The old address `mukhrizizraf.github.io/website-design-idea/ai-learning-dashboard/` is only a redirect to the new one. Use the new address everywhere.
+
 ## Edit here, push from here (owner rule, 13 Nov 2026)
 
 - **This folder is the only source:** `I:\My Drive\AI LEARNING\ai-learning-dashboard` (not a git repo; git data in Google Drive gets corrupted by sync, so never `git init` here).
