@@ -43,7 +43,7 @@ No dependencies and no bundler. Node 22+.
 - **Unused drafts:** `particles.js` (particle book → cube → shelf story), `skillcube.js` (block-cube hero), `vibe.js`. `showcase.*`, `room.jpg` and `skill-shelf-icons.png` are leftovers from an earlier design (`tests/showcase.test.mjs` still checks `showcase.js`).
 - `server.mjs` serves only an explicit allowlist of files (`const files={...}`): add any new public file there or `npm start` returns 404 for it. Its CSP hashes inline scripts in every `.html`. It also hosts a token-protected lesson API; `bridge.mjs` is a stdio MCP server (`save_lesson`); `public/model.js` remains for them and the tests.
 
-## Status and next steps (end of 13 Nov 2026)
+## Status and next steps (end of 13 Nov 2026, late)
 
 - **Approved direction (12 Nov), "Every skill is a book":** A books everywhere (no cubes); B ten clearly different cover colours, neighbours never similar, everything else ink/white/light grey; C name and level only on cards; D motion on the home screen, library motion only on interaction; E big menus (at least 48 px tall, 13 px labels on phones). Mockups: https://claude.ai/code/artifact/a854f753-b732-4921-82e6-3da90247cbaa (private to the owner).
 - **Jury (13 Nov, blind critic, 3 pages):** critic 6.6, jury estimate about 7.7 (optimistic: the +1.1 offset was measured only on Site of the Day winners). Design 7, Usability 6, Creativity 7, Content 6; developer areas 6 to 7; audit 0 FAIL, 20 WARN. The critic read the covers as "comic trading cards", not books.
@@ -62,7 +62,9 @@ No dependencies and no bundler. Node 22+.
   2. **The problem:** the jury critic said it is a plain white window and doesn't look like a book, unlike the rest of the app.
   3. **Mockups:** make 2 or 3 example designs of that window on one page (an Artifact), e.g. a header in the book's cover colour with the spine band and a big cover image (160 px or more instead of 60 px).
   4. **The owner chooses** one on the phone; only then build it.
-- Remaining from the cards: one line saying what the app is for, smaller fonts, robots.txt/sitemap/branded 404, library footer, a real shared-element page transition, the fan sliding under the laptop dock.
+- **Done 13 Nov (late):** the app moved to its own repo `mukhrizizraf/ai-learning-dashboard` (see the top of this file), `npm run push-site` is the only way to push, and the old address only redirects. The site root `index.html` now redirects instantly (owner saw its fallback links flash for about 0.5 s on the phone, from a WhatsApp screen recording).
+- **Open, asked 13 Nov, owner hasn't answered:** soft pastel colour blobs (orange, purple, pink) show for a moment while the home loads (owner's phone video, jury round 4 home d-00 and library d-90-a/b). They are not in the final design (plain `#f5f5f7` was chosen). Likely the `.veil` layer or a leftover CSS background on first paint. Ask before removing.
+- Remaining from the cards: one line saying what the app is for, smaller fonts, robots.txt/sitemap/branded 404, library footer, a real shared-element page transition, the fan sliding under the laptop dock, cut-off names in the library ("Awwwards Website…"), serif fallback text on the 3D covers, weak hover on the logo and rail items, focus trap in the skill sheet.
 
 ## Things that are easy to get wrong
 
