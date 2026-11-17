@@ -29,6 +29,9 @@ window.SKILL_DATA = {
     juliobsz: { name: 'juliobsz/skills', url: 'https://github.com/juliobsz/skills', repo: 'juliobsz/skills', branch: 'main', dir: '' },
     claudemem: { name: 'thedotmack/claude-mem', url: 'https://github.com/thedotmack/claude-mem', repo: 'thedotmack/claude-mem', branch: 'main',
       plugin: ['/plugin marketplace add thedotmack/claude-mem', '/plugin install claude-mem'] },
+    claudexloop: { name: 'chaseai-yt/claudex-loop', url: 'https://github.com/chaseai-yt/claudex-loop', repo: 'chaseai-yt/claudex-loop', branch: 'main', dir: 'skills' },
+    heygen: { name: 'HeyGen HyperFrames', url: 'https://github.com/heygen-com/hyperframes', repo: 'heygen-com/hyperframes', branch: 'main', dir: 'skills' },
+    last30: { name: 'mvanhorn/last30days-skill', url: 'https://github.com/mvanhorn/last30days-skill', repo: 'mvanhorn/last30days-skill', branch: 'main', dir: 'skills' },
     claudeapp: { name: 'Claude app', url: '' },
     plugin: { name: 'Claude plugin', url: '' },
     community: { name: 'Community', url: '' },
@@ -436,6 +439,20 @@ window.SKILL_DATA = {
     { id: 'claude-mem', title: 'Claude-Mem (Memory)', cat: 'workflow', icon: '🧠', level: 'medium', src: 'claudemem',
       what: 'Gives Claude a long-term memory of past sessions, plus a to-do list that carries over.',
       useFor: ['Continuing work across days', 'Remembering your preferences', 'Tracking open tasks'],
-      say: 'What did we decide last week about my dashboard design?' }
+      say: 'What did we decide last week about my dashboard design?' },
+
+    // ---------- Added 17 Nov 2026 ----------
+    { id: 'claudex-loop', title: 'Claudex Loop', cat: 'coding', icon: '🔁', level: 'technical', src: 'claudexloop',
+      what: 'Has Claude and Codex review the same plan, then fix it, before anything is built.',
+      useFor: ['Checking a big plan before you build it', 'Getting a second opinion from another AI', 'Having one AI build and the other inspect'],
+      say: 'Use claudex-loop to review this plan, then fix what the reviewer finds.' },
+    { id: 'hyperframes', title: 'HyperFrames Video', cat: 'motion', icon: '🎬', level: 'technical', src: 'heygen',
+      what: 'Makes videos from a web page: titles, captions, charts and short clips you can render to MP4.',
+      useFor: ['Launch and explainer videos', 'Captions and title cards', 'Vertical clips for TikTok or Reels'],
+      say: 'Use hyperframes to make a 15-second vertical video that introduces my AI Skill Shelf.' },
+    { id: 'last30days', title: 'Last 30 Days', cat: 'writing', icon: '🔎', level: 'easy', src: 'last30',
+      what: 'Researches what people said about a topic in the last 30 days on Reddit, X, YouTube and Hacker News.',
+      useFor: ['Finding what is new about a tool or topic', 'Checking what people really think', 'Getting ideas for what to make next'],
+      say: 'Use last30days to research what people are saying about AI design tools.' }
   ]
 };

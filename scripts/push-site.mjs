@@ -14,7 +14,7 @@ import { fileURLToPath } from 'node:url';
 
 const REPO = 'https://github.com/mukhrizizraf/ai-learning-dashboard.git';
 const LIVE = 'https://mukhrizizraf.github.io/ai-learning-dashboard/';
-const SKIP_DIRS = new Set(['node_modules', 'dist', 'data', '.github', '.git', '.jury', '.claude', '__pycache__']);
+const SKIP_DIRS = new Set(['node_modules', 'dist', 'data', '.github', '.git', '.jury', '.claude', '__pycache__', '.code-review-graph']);
 const SKIP_EXT = new Set(['.mp4', '.zip']);
 const TEXT_EXT = new Set(['.html', '.htm', '.css', '.js', '.mjs', '.cjs', '.json', '.md', '.txt', '.svg', '.py', '.webmanifest', '.yml', '.yaml', '.xml', '.csv', '.gitignore']);
 

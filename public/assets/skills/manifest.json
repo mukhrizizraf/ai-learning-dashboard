@@ -482,5 +482,38 @@
     "appSize": 256,
     "transparent": true,
     "sha256": "ffe772c54db0501ff56c95bc19ac83535590025ddee6929b16178565cc1ce2fd"
+  },
+  {
+    "id": "claudex-loop",
+    "title": "Claudex Loop",
+    "category": "coding",
+    "png": "claudex-loop.png",
+    "webp": "claudex-loop.webp",
+    "uploadSize": 512,
+    "appSize": 256,
+    "transparent": true,
+    "sha256": "13ca268a16ba24385dfd315714d04d4b26a9c29084289d0deb785e5fa07765fb"
+  },
+  {
+    "id": "hyperframes",
+    "title": "HyperFrames Video",
+    "category": "motion",
+    "png": "hyperframes.png",
+    "webp": "hyperframes.webp",
+    "uploadSize": 512,
+    "appSize": 256,
+    "transparent": true,
+    "sha256": "5264ffd7d3149f7090d48611056d5b03f3510cf2fb08860c15a761d6611708d6"
+  },
+  {
+    "id": "last30days",
+    "title": "Last 30 Days",
+    "category": "writing",
+    "png": "last30days.png",
+    "webp": "last30days.webp",
+    "uploadSize": 512,
+    "appSize": 256,
+    "transparent": true,
+    "sha256": "2af694d1b7bd6eee418d5740b282509672b5c8f04ec19f9e84b59755dd002dd3"
   }
 ]
