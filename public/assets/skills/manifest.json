@@ -537,5 +537,16 @@
     "appSize": 256,
     "transparent": true,
     "sha256": "08e5a4643495c0e70ee23c64d3105dc551b2aa60607adf59cc6a28692cf85cd9"
+  },
+  {
+    "id": "remotion-best-practices",
+    "title": "Remotion Best Practices",
+    "category": "motion",
+    "png": "remotion-best-practices.png",
+    "webp": "remotion-best-practices.webp",
+    "uploadSize": 512,
+    "appSize": 256,
+    "transparent": true,
+    "sha256": "0659c6bbede50d53000c42fdc1a9d7379b0e0b18bdbd6296758600d10c1b2ddf"
   }
 ]

@@ -34,6 +34,7 @@ window.SKILL_DATA = {
     last30: { name: 'mvanhorn/last30days-skill', url: 'https://github.com/mvanhorn/last30days-skill', repo: 'mvanhorn/last30days-skill', branch: 'main', dir: 'skills' },
     claudevideo: { name: 'bradautomates/claude-video', url: 'https://github.com/bradautomates/claude-video', repo: 'bradautomates/claude-video', branch: 'main', dir: 'skills' },
     impeccable: { name: 'pbakaus/impeccable', url: 'https://github.com/pbakaus/impeccable', repo: 'pbakaus/impeccable', branch: 'main', dir: '.claude/skills' },
+    remotion: { name: 'remotion-dev/skills', url: 'https://github.com/remotion-dev/skills', repo: 'remotion-dev/skills', branch: 'main', dir: 'skills' },
     claudeapp: { name: 'Claude app', url: '' },
     plugin: { name: 'Claude plugin', url: '' },
     community: { name: 'Community', url: '' },
@@ -467,6 +468,12 @@ window.SKILL_DATA = {
     { id: 'impeccable', title: 'Impeccable', cat: 'design', icon: '💎', level: 'medium', src: 'impeccable',
       what: 'Gives Claude a design eye: it builds, critiques and polishes pages and catches generic "AI slop" looks.',
       useFor: ['Making a page bolder or calmer', 'Checking a design for problems', 'Polishing buttons, type and layout'],
-      say: 'Use impeccable to critique my homepage, then polish what is weak.' }
+      say: 'Use impeccable to critique my homepage, then polish what is weak.' },
+
+    // ---------- Added 2026-11-17 (npm run add-skills: check the wording) ----------
+    { id: 'remotion-best-practices', title: 'Remotion Video', cat: 'motion', icon: '🎞️', level: 'technical', src: 'remotion',
+      what: 'Teaches Claude to make videos with code using Remotion, and picks the right Remotion skill for you.',
+      useFor: ['Promo and explainer videos', 'Animated title cards and captions', 'Videos you can change by editing text'],
+      say: 'Use remotion-best-practices to make a 10-second promo video for my AI Skill Shelf.' }
   ]
 };

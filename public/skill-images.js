@@ -50,7 +50,8 @@
   "hyperframes",
   "last30days",
   "watch",
-  "impeccable"
+  "impeccable",
+  "remotion-best-practices"
 ]);
   const known = new Set(ids);
   const src = (id, format = 'webp') => known.has(id) && ['webp', 'png'].includes(format) ? './assets/skills/' + id + '.' + format : '';
