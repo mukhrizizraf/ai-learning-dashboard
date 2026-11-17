@@ -51,7 +51,21 @@
   "last30days",
   "watch",
   "impeccable",
-  "remotion-best-practices"
+  "remotion-best-practices",
+  "animate-expo",
+  "claudex-route",
+  "codex-build",
+  "codex-review",
+  "diagram-design",
+  "markitdown",
+  "notebooklm",
+  "pick-ui-library",
+  "prototype",
+  "reverse-engineer-anything",
+  "slideshow",
+  "taste",
+  "ui-ux-pro-max",
+  "write-swift"
 ]);
   const known = new Set(ids);
   const src = (id, format = 'webp') => known.has(id) && ['webp', 'png'].includes(format) ? './assets/skills/' + id + '.' + format : '';
