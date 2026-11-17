@@ -526,5 +526,16 @@
     "appSize": 256,
     "transparent": true,
     "sha256": "079ceebf6eebc7f7756e579e1fad4b59deae8e4d26fadab90f057200408616e7"
+  },
+  {
+    "id": "impeccable",
+    "title": "Impeccable",
+    "category": "motion",
+    "png": "impeccable.png",
+    "webp": "impeccable.webp",
+    "uploadSize": 512,
+    "appSize": 256,
+    "transparent": true,
+    "sha256": "08e5a4643495c0e70ee23c64d3105dc551b2aa60607adf59cc6a28692cf85cd9"
   }
 ]

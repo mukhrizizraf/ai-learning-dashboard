@@ -33,6 +33,7 @@ window.SKILL_DATA = {
     heygen: { name: 'HeyGen HyperFrames', url: 'https://github.com/heygen-com/hyperframes', repo: 'heygen-com/hyperframes', branch: 'main', dir: 'skills' },
     last30: { name: 'mvanhorn/last30days-skill', url: 'https://github.com/mvanhorn/last30days-skill', repo: 'mvanhorn/last30days-skill', branch: 'main', dir: 'skills' },
     claudevideo: { name: 'bradautomates/claude-video', url: 'https://github.com/bradautomates/claude-video', repo: 'bradautomates/claude-video', branch: 'main', dir: 'skills' },
+    impeccable: { name: 'pbakaus/impeccable', url: 'https://github.com/pbakaus/impeccable', repo: 'pbakaus/impeccable', branch: 'main', dir: '.claude/skills' },
     claudeapp: { name: 'Claude app', url: '' },
     plugin: { name: 'Claude plugin', url: '' },
     community: { name: 'Community', url: '' },
@@ -460,6 +461,12 @@ window.SKILL_DATA = {
     { id: 'watch', title: 'Watch Video', cat: 'motion', icon: '👀', level: 'medium', src: 'claudevideo',
       what: 'Lets Claude watch a video from a link or a file, then answer questions about it.',
       useFor: ['Summarising a YouTube or TikTok video', 'Finding what happens at a moment in a video', 'Pulling the words out of a video'],
-      say: 'Use watch on this video and tell me the main points: <paste the link>' }
+      say: 'Use watch on this video and tell me the main points: <paste the link>' },
+
+    // ---------- Added 2026-11-17 (npm run add-skills: check the wording) ----------
+    { id: 'impeccable', title: 'Impeccable', cat: 'design', icon: '💎', level: 'medium', src: 'impeccable',
+      what: 'Gives Claude a design eye: it builds, critiques and polishes pages and catches generic "AI slop" looks.',
+      useFor: ['Making a page bolder or calmer', 'Checking a design for problems', 'Polishing buttons, type and layout'],
+      say: 'Use impeccable to critique my homepage, then polish what is weak.' }
   ]
 };

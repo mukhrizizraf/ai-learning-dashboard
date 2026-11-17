@@ -49,7 +49,8 @@
   "claudex-loop",
   "hyperframes",
   "last30days",
-  "watch"
+  "watch",
+  "impeccable"
 ]);
   const known = new Set(ids);
   const src = (id, format = 'webp') => known.has(id) && ['webp', 'png'].includes(format) ? './assets/skills/' + id + '.' + format : '';
