@@ -1,0 +1,162 @@
+{
+  "url": "https://mukhrizizraf.github.io/website-design-idea/ai-learning-dashboard/public/shelf.html#skill=awwwards",
+  "errors": [],
+  "failed": [],
+  "desktop": {
+    "loadMs": 774,
+    "loaderMs": null,
+    "settledMs": 3794,
+    "vitals": {
+      "lcpMs": 1588,
+      "lcpElement": "p.lead",
+      "cls": 0
+    },
+    "height": 2655,
+    "overflowX": false,
+    "offenders": [],
+    "h1": [
+      "All skills"
+    ],
+    "smallTargets": [],
+    "glHidden": [],
+    "title": "All skills · AI Skill Shelf",
+    "glOn": false,
+    "scrollFps": {
+      "fps": 61,
+      "worstFrameMs": 18
+    },
+    "idleMotion": false,
+    "idleAt": null
+  },
+  "mobile": {
+    "throttled": true,
+    "loadMs": 2281,
+    "loaderMs": null,
+    "settledMs": 4634,
+    "vitals": {
+      "lcpMs": 2236,
+      "lcpElement": "p.lead",
+      "cls": 0
+    },
+    "height": 6408,
+    "overflowX": false,
+    "offenders": [],
+    "h1": [
+      "All skills"
+    ],
+    "smallTargets": [],
+    "glHidden": [],
+    "title": "All skills · AI Skill Shelf",
+    "glOn": false,
+    "scrollFps": {
+      "fps": 59,
+      "worstFrameMs": 32
+    }
+  },
+  "files": [
+    "I:\\My Drive\\AI LEARNING\\ai-learning-dashboard\\.jury\\mukhrizizraf.github.io\\detail-tmp\\d-00-firstpaint.png",
+    "I:\\My Drive\\AI LEARNING\\ai-learning-dashboard\\.jury\\mukhrizizraf.github.io\\detail-tmp\\d-01-hero.png",
+    "I:\\My Drive\\AI LEARNING\\ai-learning-dashboard\\.jury\\mukhrizizraf.github.io\\detail-tmp\\d-02-scroll.png",
+    "I:\\My Drive\\AI LEARNING\\ai-learning-dashboard\\.jury\\mukhrizizraf.github.io\\detail-tmp\\d-03-scroll.png",
+    "I:\\My Drive\\AI LEARNING\\ai-learning-dashboard\\.jury\\mukhrizizraf.github.io\\detail-tmp\\d-04-scroll.png",
+    "I:\\My Drive\\AI LEARNING\\ai-learning-dashboard\\.jury\\mukhrizizraf.github.io\\detail-tmp\\d-05-scroll.png",
+    "I:\\My Drive\\AI LEARNING\\ai-learning-dashboard\\.jury\\mukhrizizraf.github.io\\detail-tmp\\d-06-scroll.png",
+    "I:\\My Drive\\AI LEARNING\\ai-learning-dashboard\\.jury\\mukhrizizraf.github.io\\detail-tmp\\d-07-scroll.png",
+    "I:\\My Drive\\AI LEARNING\\ai-learning-dashboard\\.jury\\mukhrizizraf.github.io\\detail-tmp\\k-01-focus.png",
+    "I:\\My Drive\\AI LEARNING\\ai-learning-dashboard\\.jury\\mukhrizizraf.github.io\\detail-tmp\\k-02-focus.png",
+    "I:\\My Drive\\AI LEARNING\\ai-learning-dashboard\\.jury\\mukhrizizraf.github.io\\detail-tmp\\k-03-focus.png",
+    "I:\\My Drive\\AI LEARNING\\ai-learning-dashboard\\.jury\\mukhrizizraf.github.io\\detail-tmp\\k-04-focus.png",
+    "I:\\My Drive\\AI LEARNING\\ai-learning-dashboard\\.jury\\mukhrizizraf.github.io\\detail-tmp\\h-01-rest.png",
+    "I:\\My Drive\\AI LEARNING\\ai-learning-dashboard\\.jury\\mukhrizizraf.github.io\\detail-tmp\\h-01-hover.png",
+    "I:\\My Drive\\AI LEARNING\\ai-learning-dashboard\\.jury\\mukhrizizraf.github.io\\detail-tmp\\h-02-rest.png",
+    "I:\\My Drive\\AI LEARNING\\ai-learning-dashboard\\.jury\\mukhrizizraf.github.io\\detail-tmp\\h-02-hover.png",
+    "I:\\My Drive\\AI LEARNING\\ai-learning-dashboard\\.jury\\mukhrizizraf.github.io\\detail-tmp\\h-03-rest.png",
+    "I:\\My Drive\\AI LEARNING\\ai-learning-dashboard\\.jury\\mukhrizizraf.github.io\\detail-tmp\\h-03-hover.png",
+    "I:\\My Drive\\AI LEARNING\\ai-learning-dashboard\\.jury\\mukhrizizraf.github.io\\detail-tmp\\m-01-hero.png",
+    "I:\\My Drive\\AI LEARNING\\ai-learning-dashboard\\.jury\\mukhrizizraf.github.io\\detail-tmp\\m-02-scroll.png",
+    "I:\\My Drive\\AI LEARNING\\ai-learning-dashboard\\.jury\\mukhrizizraf.github.io\\detail-tmp\\m-03-scroll.png",
+    "I:\\My Drive\\AI LEARNING\\ai-learning-dashboard\\.jury\\mukhrizizraf.github.io\\detail-tmp\\m-04-scroll.png",
+    "I:\\My Drive\\AI LEARNING\\ai-learning-dashboard\\.jury\\mukhrizizraf.github.io\\detail-tmp\\m-05-scroll.png",
+    "I:\\My Drive\\AI LEARNING\\ai-learning-dashboard\\.jury\\mukhrizizraf.github.io\\detail-tmp\\m-06-scroll.png",
+    "I:\\My Drive\\AI LEARNING\\ai-learning-dashboard\\.jury\\mukhrizizraf.github.io\\detail-tmp\\r-01-hero.png",
+    "I:\\My Drive\\AI LEARNING\\ai-learning-dashboard\\.jury\\mukhrizizraf.github.io\\detail-tmp\\r-02-mid.png"
+  ],
+  "notes": [
+    "desktop FPS runs headless on a software GPU: treat it as a floor, not a measurement of real hardware",
+    "mobile runs at 4x CPU slowdown on slow 4G: mobile.vitals and mobile.scrollFps are the numbers that count",
+    "loadMs: ms from navigation to the load event, null if it had not fired after 30 s (desktop) or 60 s (phone); a heavy page takes long, while visitors see content at vitals.lcpMs. loaderMs: ms until the #loader ended, null when the page has none",
+    "settledMs: ms from navigation by which the first screen stopped changing, never before the fixed wait. null: still changing at the cap, either a long intro or continuous motion (a live shader, video); d-01-hero / m-01-hero tell which. reduced.moving: the screen was still changing 1.5 s after load with reduced motion on"
+  ],
+  "keyboard": {
+    "stops": [
+      "button \"Copy\"",
+      "button \"Ask Claude Code\"",
+      "button \"Windows\"",
+      "button \"Mac or Linux\"",
+      "button \"Claude app\"",
+      "button \"Copy\"",
+      "button \"Copy link\"",
+      "button \"Share skill\"",
+      "(body: focus left the page)"
+    ],
+    "skipLinkFirst": false,
+    "noVisibleFocus": [],
+    "invisibleFocus": [],
+    "stuck": false
+  },
+  "hover": {
+    "targets": [
+      {
+        "shot": "h-01",
+        "label": "button \"×\"",
+        "interactive": true,
+        "primary": true,
+        "react": "moves",
+        "changed": [
+          "rotate"
+        ]
+      },
+      {
+        "shot": "h-02",
+        "label": "button \"Copy\"",
+        "interactive": true,
+        "primary": true,
+        "react": "moves",
+        "changed": [
+          "backgroundColor",
+          "translate",
+          "boxShadow"
+        ]
+      },
+      {
+        "shot": "h-03",
+        "label": "button \"Ask Claude Code\"",
+        "interactive": true,
+        "primary": true,
+        "react": "moves",
+        "changed": [
+          "translate"
+        ]
+      }
+    ],
+    "noHoverChange": [],
+    "colorOnly": [],
+    "covered": [
+      "button \"All 44\"",
+      "button \"Guide\"",
+      "button \"Surprise me\"",
+      "button \"Awwwards Website Builder New · Medium\"",
+      "button \"Website Jury New · Easy\""
+    ],
+    "cursorFollower": false
+  },
+  "reduced": {
+    "hiddenText": 0,
+    "moving": false
+  },
+  "a11y": {
+    "violations": [],
+    "serious": 0,
+    "contrastNeedsReview": 0
+  }
+}

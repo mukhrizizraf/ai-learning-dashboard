@@ -1,0 +1,24 @@
+WARN  /website-design-idea/ai-learning-dashboard/public/index.html  only 20 words of visible text (thin content)
+WARN  site                          no robots.txt
+WARN  site                          no sitemap
+WARN  /website-design-idea/ai-learning-dashboard/public/index.html  ttf/otf font shipped: 3y9U6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5jBNz_19PpbpMXuECpwUxJBOm_OJWiaaD30YfKfjZZoLvRviyM0.ttf (use woff2)
+WARN  /website-design-idea/ai-learning-dashboard/public/index.html  ttf/otf font shipped: 3y9U6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5jBNz_19PpbpMXuECpwUxJBOm_OJWiaaD30YfKfjZZoLvSniyM0.ttf (use woff2)
+WARN  /website-design-idea/ai-learning-dashboard/public/index.html  ttf/otf font shipped: 3y9U6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5jBNz_19PpbpMXuECpwUxJBOm_OJWiaaD30YfKfjZZoLvcXlyM0.ttf (use woff2)
+WARN  /website-design-idea/ai-learning-dashboard/public/index.html  ttf/otf font shipped: 3y9U6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5jBNz_19PpbpMXuECpwUxJBOm_OJWiaaD30YfKfjZZoLvfzlyM0.ttf (use woff2)
+WARN  /website-design-idea/ai-learning-dashboard/public/index.html  ttf/otf font shipped: 3y9U6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5jBNz_19PpbpMXuECpwUxJBOm_OJWiaaD30YfKfjZZoLvZvlyM0.ttf (use woff2)
+WARN  /website-design-idea/ai-learning-dashboard/public/index.html  ttf/otf font shipped: jizHRFtNs2ka5fXjeivQ4LroWlx-6zATiw.ttf (use woff2)
+WARN  /website-design-idea/ai-learning-dashboard/public/index.html  ttf/otf font shipped: jizBRFtNs2ka5fXjeivQ4LroWlx-2zI.ttf (use woff2)
+WARN  /website-design-idea/ai-learning-dashboard/public/index.html  ttf/otf font shipped: tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8-qxjPQ.ttf (use woff2)
+WARN  /website-design-idea/ai-learning-dashboard/public/index.html  fonts 635 KB (fewer weights, variable font, subset)
+WARN  /website-design-idea/ai-learning-dashboard/public/shelf.html  ttf/otf font shipped: 3y9U6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5jBNz_19PpbpMXuECpwUxJBOm_OJWiaaD30YfKfjZZoLvRviyM0.ttf (use woff2)
+WARN  /website-design-idea/ai-learning-dashboard/public/shelf.html  ttf/otf font shipped: 3y9U6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5jBNz_19PpbpMXuECpwUxJBOm_OJWiaaD30YfKfjZZoLvSniyM0.ttf (use woff2)
+WARN  /website-design-idea/ai-learning-dashboard/public/shelf.html  ttf/otf font shipped: 3y9U6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5jBNz_19PpbpMXuECpwUxJBOm_OJWiaaD30YfKfjZZoLvcXlyM0.ttf (use woff2)
+WARN  /website-design-idea/ai-learning-dashboard/public/shelf.html  ttf/otf font shipped: 3y9U6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5jBNz_19PpbpMXuECpwUxJBOm_OJWiaaD30YfKfjZZoLvfzlyM0.ttf (use woff2)
+WARN  /website-design-idea/ai-learning-dashboard/public/shelf.html  ttf/otf font shipped: 3y9U6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5jBNz_19PpbpMXuECpwUxJBOm_OJWiaaD30YfKfjZZoLvZvlyM0.ttf (use woff2)
+WARN  /website-design-idea/ai-learning-dashboard/public/shelf.html  ttf/otf font shipped: jizHRFtNs2ka5fXjeivQ4LroWlx-6zATiw.ttf (use woff2)
+WARN  /website-design-idea/ai-learning-dashboard/public/shelf.html  ttf/otf font shipped: jizBRFtNs2ka5fXjeivQ4LroWlx-2zI.ttf (use woff2)
+WARN  /website-design-idea/ai-learning-dashboard/public/shelf.html  fonts 525 KB (fewer weights, variable font, subset)
+
+2 pages crawled from https://mukhrizizraf.github.io/website-design-idea/ai-learning-dashboard/public/index.html
+heaviest page /website-design-idea/ai-learning-dashboard/public/index.html: ~683 KB | html 14 | JS 21 (gz) | CSS 14 (gz) | fonts 635 | images 0
+0 FAIL, 20 WARN
