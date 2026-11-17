@@ -32,6 +32,7 @@ window.SKILL_DATA = {
     claudexloop: { name: 'chaseai-yt/claudex-loop', url: 'https://github.com/chaseai-yt/claudex-loop', repo: 'chaseai-yt/claudex-loop', branch: 'main', dir: 'skills' },
     heygen: { name: 'HeyGen HyperFrames', url: 'https://github.com/heygen-com/hyperframes', repo: 'heygen-com/hyperframes', branch: 'main', dir: 'skills' },
     last30: { name: 'mvanhorn/last30days-skill', url: 'https://github.com/mvanhorn/last30days-skill', repo: 'mvanhorn/last30days-skill', branch: 'main', dir: 'skills' },
+    claudevideo: { name: 'bradautomates/claude-video', url: 'https://github.com/bradautomates/claude-video', repo: 'bradautomates/claude-video', branch: 'main', dir: 'skills' },
     claudeapp: { name: 'Claude app', url: '' },
     plugin: { name: 'Claude plugin', url: '' },
     community: { name: 'Community', url: '' },
@@ -453,6 +454,12 @@ window.SKILL_DATA = {
     { id: 'last30days', title: 'Last 30 Days', cat: 'writing', icon: '🔎', level: 'easy', src: 'last30',
       what: 'Researches what people said about a topic in the last 30 days on Reddit, X, YouTube and Hacker News.',
       useFor: ['Finding what is new about a tool or topic', 'Checking what people really think', 'Getting ideas for what to make next'],
-      say: 'Use last30days to research what people are saying about AI design tools.' }
+      say: 'Use last30days to research what people are saying about AI design tools.' },
+
+    // ---------- Added 2026-11-17 (npm run add-skills: check the wording) ----------
+    { id: 'watch', title: 'Watch Video', cat: 'motion', icon: '👀', level: 'medium', src: 'claudevideo',
+      what: 'Lets Claude watch a video from a link or a file, then answer questions about it.',
+      useFor: ['Summarising a YouTube or TikTok video', 'Finding what happens at a moment in a video', 'Pulling the words out of a video'],
+      say: 'Use watch on this video and tell me the main points: <paste the link>' }
   ]
 };

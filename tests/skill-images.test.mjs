@@ -47,7 +47,9 @@ test('the local server serves the entire image manifest with correct types and i
     const response = await fetch(base + '/assets/skills/manifest.json');
     assert.equal(response.status, 200);
     const manifest = await response.json();
-    assert.equal(manifest.length, 47);
+    const ctx = vm.createContext({ window: {} });
+    vm.runInContext(await readFile('public/skills.js', 'utf8'), ctx);
+    assert.equal(manifest.length, ctx.window.SKILL_DATA.skills.length + (ctx.window.SKILL_DATA.collections || []).length);
     for (const skill of manifest) {
       for (const format of ['png', 'webp']) {
         const image = await fetch(base + '/assets/skills/' + skill[format]);

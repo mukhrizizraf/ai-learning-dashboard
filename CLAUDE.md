@@ -25,6 +25,8 @@ npm test                                   # node --test tests/*.test.mjs
 node --test tests/skills.test.mjs          # one test file
 node --test --test-name-pattern="install" tests/skills.test.mjs   # one test
 npm run build                              # copies public/ to dist/ (and README into public/)
+npm run add-skills                         # lists skills installed in ~/.claude/skills that the app lacks, with draft cards; changes nothing
+npm run add-skills -- --yes [--only a,b] [--repo owner/name]   # adds the cards + a spare icon from public/assets/future-skills; --ignore a,b hides helpers (scripts/add-skills.ignore.json). Polish the draft wording in skills.js, then npm test and push-site.
 ```
 
 No dependencies and no bundler. Node 22+.

@@ -515,5 +515,16 @@
     "appSize": 256,
     "transparent": true,
     "sha256": "2af694d1b7bd6eee418d5740b282509672b5c8f04ec19f9e84b59755dd002dd3"
+  },
+  {
+    "id": "watch",
+    "title": "Watch",
+    "category": "motion",
+    "png": "watch.png",
+    "webp": "watch.webp",
+    "uploadSize": 512,
+    "appSize": 256,
+    "transparent": true,
+    "sha256": "079ceebf6eebc7f7756e579e1fad4b59deae8e4d26fadab90f057200408616e7"
   }
 ]

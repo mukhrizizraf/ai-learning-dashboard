@@ -48,7 +48,8 @@
   "prompt-motion-design-ideas",
   "claudex-loop",
   "hyperframes",
-  "last30days"
+  "last30days",
+  "watch"
 ]);
   const known = new Set(ids);
   const src = (id, format = 'webp') => known.has(id) && ['webp', 'png'].includes(format) ? './assets/skills/' + id + '.' + format : '';
