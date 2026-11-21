@@ -21,6 +21,10 @@ window.SKILL_DATA = {
   // a skill folder lives at <repo>/<dir>/<skill id>. root:true means the whole repo is one skill.
   // plugin: commands to type inside Claude Code instead of copying folders.
   sources: {
+    lineart: { name: 'JDhruv14', url: 'https://github.com/JDhruv14/line-art-animation', repo: 'JDhruv14/line-art-animation', branch: 'main', dir: '', root: true,
+      usageNote: 'Examples need Node.js 22.18 or newer. On Windows, video capture needs CHROME set to your Chrome or Chromium executable.',
+      setup: [['claude', 'Claude Code', 'Needs Git. Clone the complete skill, including its library and examples, then restart Claude Code. Run npm ci inside that folder before running the examples.', 'git clone --depth 1 https://github.com/JDhruv14/line-art-animation.git "$HOME/.claude/skills/line-art-animation"'],
+              ['codex', 'Codex', 'Needs Git. Clone the complete skill, then start a new Codex thread and use $line-art-animation. Run npm ci inside that folder before running the examples.', 'git clone --depth 1 https://github.com/JDhruv14/line-art-animation.git "$HOME/.codex/skills/line-art-animation"']] },
     lemo: { name: 'Lemomo / LemoLab', url: 'https://github.com/lemomo-ai/lemo-opuscar', repo: 'lemomo-ai/lemo-opuscar', branch: 'main', dir: 'plugin/skills',
       usageNote: 'Built for Claude; other agents may reproduce the styles differently. Needs Node.js 20+, FFmpeg 7+, and Python 3.11+ or uv. Windows setup uses Git Bash.',
       setup: [['claude', 'Claude Code', 'Run both lines in a terminal, then restart Claude Code. Start with /lemo-opuscar:lemo-opuscar. The first film sets up its local rendering library.', 'claude plugin marketplace add lemomo-ai/lemo-opuscar\nclaude plugin install lemo-opuscar@lemolab'],
@@ -227,6 +231,10 @@ window.SKILL_DATA = {
     }
   ],
   skills: [
+    { id: 'line-art-animation', title: 'Line Art Animation', cat: 'motion', icon: '✒️', level: 'technical', src: 'lineart', added: '2026-11-21',
+      what: 'Builds interactive ink-on-paper SVG scenes with walking figures, moving clothes, wind and a day-night cycle.',
+      useFor: ['Animated hand-drawn website scenes', 'Natural walking and running characters', 'Frame-by-frame video export'],
+      say: 'Use line-art-animation to make a bakery at dawn, with a baker carrying trays and a cat in the window. Show me one figure first.' },
     { id: 'lemo-opuscar', title: 'Lemo-Opuscar Films', cat: 'motion', icon: '🎬', level: 'technical', src: 'lemo', added: '2026-11-21',
       what: 'Directs short films drawn in code, with a library of visual styles and guides for story, animation, sound and rendering.',
       useFor: ['Artistic animated explainers', 'Code-rendered promos and short films', 'Adapting a film style to your topic'],

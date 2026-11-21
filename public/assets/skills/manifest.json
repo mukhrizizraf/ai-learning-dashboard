@@ -779,5 +779,16 @@
     "appSize": 256,
     "transparent": true,
     "sha256": "288ba4a4a270160f74fb6bb99ba4239bcbb66c9cb3ae0cee7beb05385ec05c38"
+  },
+  {
+    "id": "line-art-animation",
+    "title": "Line Art Animation",
+    "category": "motion",
+    "png": "line-art-animation.png",
+    "webp": "line-art-animation.webp",
+    "uploadSize": 512,
+    "appSize": 256,
+    "transparent": true,
+    "sha256": "3c7ba29b4d15c1d78ea00f5b495f52f1b2fa7fe71a250e95b257ebd030c0484a"
   }
 ]

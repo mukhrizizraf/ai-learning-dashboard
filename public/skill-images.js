@@ -72,7 +72,8 @@
   "ponytail",
   "graphify",
   "rtk",
-  "lemo-opuscar"
+  "lemo-opuscar",
+  "line-art-animation"
 ]);
   const known = new Set(ids);
   const src = (id, format = 'webp') => known.has(id) && ['webp', 'png'].includes(format) ? './assets/skills/' + id + '.' + format : '';
