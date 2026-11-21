@@ -462,9 +462,9 @@ window.SKILL_DATA = {
 
     // ---------- Added 2026-11-17 (npm run add-skills: check the wording) ----------
     { id: 'watch', title: 'Watch Video', cat: 'motion', icon: '👀', level: 'medium', src: 'claudevideo',
-      what: 'Lets Claude watch a video from a link or a file, then answer questions about it.',
-      useFor: ['Summarising a YouTube or TikTok video', 'Finding what happens at a moment in a video', 'Pulling the words out of a video'],
-      say: 'Use watch on this video and tell me the main points: <paste the link>' },
+      what: 'Reads timestamped video frames and available captions so Claude or Codex can answer questions about a link or local file.',
+      useFor: ['Video summaries with timestamps', 'Checking what appears on screen', 'Reading available video captions'],
+      say: 'Use watch with --engine local --no-whisper to summarise this video, with timestamps: <paste a link or local file path>' },
 
     // ---------- Added 2026-11-17 (npm run add-skills: check the wording) ----------
     { id: 'impeccable', title: 'Impeccable', cat: 'design', icon: '💎', level: 'medium', src: 'impeccable',
