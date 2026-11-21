@@ -181,6 +181,10 @@
     {
       "id": "motionsites-web-builder",
       "prompt": "Use case: stylized-concept. Create one square app icon illustration for MotionSites Web Builder in a cheerful polished 3D resin and frosted acrylic style. Subject: a small cobalt browser window with ivory interface panels, a coral cinematic play triangle and a violet curved motion ribbon wrapping around one corner, small amber sparkle. A single compact sculptural object, isometric front three-quarter view, soft studio lighting and glossy rounded bevels, centered with generous transparent padding. Actual transparent background. No text, no letters, no brand logos, no watermark. This is decorative artwork inside a bright book-themed AI skills library."
+    },
+    {
+      "id": "playwright-mcp",
+      "prompt": "Use case: stylized-concept. Asset type: one decorative app icon for Microsoft Playwright MCP in a bright book-themed AI skill library. Create a single compact glossy miniature 3D sculpture: an ivory browser window with a thick cobalt blue rounded frame, a large coral mouse-pointer arrow resting on a violet button, and a small floating amber checkmark badge representing browser testing. Rounded polished resin and frosted acrylic, substantial depth, three-quarter isometric view, soft studio lighting. Centered on a square canvas with generous transparent padding, genuinely transparent alpha background, full object visible. No text, no letters, no logo, no watermark. Readable at 80px."
     }
   ]
 }

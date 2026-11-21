@@ -713,5 +713,16 @@
     "appSize": 256,
     "transparent": true,
     "sha256": "923465a7043427b4c3497f28825cb242a2328a17c8edaddac87ecfaee5e412af"
+  },
+  {
+    "id": "playwright-mcp",
+    "title": "Playwright Browser",
+    "category": "coding",
+    "png": "playwright-mcp.png",
+    "webp": "playwright-mcp.webp",
+    "uploadSize": 512,
+    "appSize": 256,
+    "transparent": true,
+    "sha256": "261b2902625e8dc6928537c86e0959f23a5ae5a48c8b9a452a0af72f64964d51"
   }
 ]

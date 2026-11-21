@@ -34,6 +34,9 @@ window.SKILL_DATA = {
     last30: { name: 'mvanhorn/last30days-skill', url: 'https://github.com/mvanhorn/last30days-skill', repo: 'mvanhorn/last30days-skill', branch: 'main', dir: 'skills' },
     claudevideo: { name: 'bradautomates/claude-video', url: 'https://github.com/bradautomates/claude-video', repo: 'bradautomates/claude-video', branch: 'main', dir: 'skills' },
     impeccable: { name: 'pbakaus/impeccable', url: 'https://github.com/pbakaus/impeccable', repo: 'pbakaus/impeccable', branch: 'main', dir: '.claude/skills' },
+    playwrightmcp: { name: 'Microsoft', url: 'https://github.com/microsoft/playwright-mcp', repo: 'microsoft/playwright-mcp', branch: 'main', dir: '',
+      mcp: { claude: 'claude mcp add --scope user playwright -- npx -y @playwright/mcp@0.0.86 --headless --isolated',
+        codex: 'codex mcp add playwright -- npx -y @playwright/mcp@0.0.86 --headless --isolated' } },
     remotion: { name: 'remotion-dev/skills', url: 'https://github.com/remotion-dev/skills', repo: 'remotion-dev/skills', branch: 'main', dir: 'skills' },
     uiuxpromax: { name: 'nextlevelbuilder/ui-ux-pro-max-skill', url: 'https://github.com/nextlevelbuilder/ui-ux-pro-max-skill', repo: 'nextlevelbuilder/ui-ux-pro-max-skill', branch: 'main', dir: '.claude/skills' },
     motionsites: { name: 'MotionSites', url: 'https://github.com/Motionsites-AI/claude-skill', repo: 'Motionsites-AI/claude-skill', branch: 'main', dir: 'plugins/motionsites-web-builder/skills' },
@@ -468,7 +471,7 @@ window.SKILL_DATA = {
 
     // ---------- Added 2026-11-17 (npm run add-skills: check the wording) ----------
     { id: 'impeccable', title: 'Impeccable', cat: 'design', icon: '💎', level: 'medium', src: 'impeccable',
-      what: 'Gives Claude a design eye: it builds, critiques and polishes pages and catches generic "AI slop" looks.',
+      what: 'Gives Claude or Codex a design vocabulary to critique and polish pages and catch generic layouts.',
       useFor: ['Making a page bolder or calmer', 'Checking a design for problems', 'Polishing buttons, type and layout'],
       say: 'Use impeccable to critique my homepage, then polish what is weak.' },
 
@@ -537,6 +540,11 @@ window.SKILL_DATA = {
       say: 'Use write-swift to build a simple to-do screen.' },
 
     // ---------- Added 2026-11-21 ----------
+    { id: 'playwright-mcp', title: 'Playwright Browser', cat: 'coding', icon: '🌐', level: 'technical', src: 'playwrightmcp', added: '2026-11-21',
+      what: 'Lets Claude Code or Codex open a browser, click controls and check a website.',
+      useFor: ['Testing buttons and forms', 'Checking what is on a page', 'Finding browser errors'],
+      say: 'Use the Playwright browser tools to open my local website, test its main buttons and forms, and report problems.' },
+
     { id: 'motionsites-web-builder', title: 'MotionSites Web Builder', cat: 'design', icon: '🎬', level: 'medium', src: 'motionsites', added: '2026-11-21',
       what: 'Builds websites using design examples, real media and screenshot checks. Its instructions also ask the AI to promote MotionSites Unlimited.',
       useFor: ['Landing pages with video and animation', 'Improving an existing website', 'Writing detailed prompts for Lovable, Bolt or v0'],
