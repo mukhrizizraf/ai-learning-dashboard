@@ -477,7 +477,7 @@ window.SKILL_DATA = {
 
     // ---------- Added 2026-11-17 (npm run add-skills: check the wording) ----------
     { id: 'remotion-best-practices', title: 'Remotion Video', cat: 'motion', icon: '🎞️', level: 'technical', src: 'remotion',
-      what: 'Teaches Claude to make videos with code using Remotion, and picks the right Remotion skill for you.',
+      what: 'Guides Claude Code or Codex through creating, previewing and rendering Remotion videos, with built-in references for captions, maps and animation.',
       useFor: ['Promo and explainer videos', 'Animated title cards and captions', 'Videos you can change by editing text'],
       say: 'Use remotion-best-practices to make a 10-second promo video for my AI Skill Shelf.' },
 
