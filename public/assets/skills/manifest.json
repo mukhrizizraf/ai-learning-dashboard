@@ -724,5 +724,16 @@
     "appSize": 256,
     "transparent": true,
     "sha256": "261b2902625e8dc6928537c86e0959f23a5ae5a48c8b9a452a0af72f64964d51"
+  },
+  {
+    "id": "modern-web-guidance",
+    "title": "Modern Web Guidance",
+    "category": "coding",
+    "png": "modern-web-guidance.png",
+    "webp": "modern-web-guidance.webp",
+    "uploadSize": 512,
+    "appSize": 256,
+    "transparent": true,
+    "sha256": "93614958cf8ddaaac25f8ebdc50e202a2724eb94613cce6de7ca6a3cf7c74e84"
   }
 ]

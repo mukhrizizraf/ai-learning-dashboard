@@ -21,6 +21,7 @@ window.SKILL_DATA = {
   // a skill folder lives at <repo>/<dir>/<skill id>. root:true means the whole repo is one skill.
   // plugin: commands to type inside Claude Code instead of copying folders.
   sources: {
+    modernweb: { name: 'Google Chrome', url: 'https://github.com/GoogleChrome/modern-web-guidance', repo: 'GoogleChrome/modern-web-guidance', branch: 'main', dir: 'skills' },
     anthropic: { name: 'Anthropic (official)', url: 'https://github.com/anthropics/skills', repo: 'anthropics/skills', branch: 'main', dir: 'skills' },
     superpowers: { name: 'obra/superpowers', url: 'https://github.com/obra/superpowers', repo: 'obra/superpowers', branch: 'main', dir: 'skills' },
     emil: { name: 'Emil Kowalski', url: 'https://github.com/emilkowalski/skills', repo: 'emilkowalski/skills', branch: 'main', dir: 'skills' },
@@ -210,6 +211,13 @@ window.SKILL_DATA = {
     }
   ],
   skills: [
+    { id: 'modern-web-guidance', title: 'Modern Web Guidance', cat: 'coding', icon: '🧭', level: 'technical', src: 'modernweb', added: '2026-11-21',
+      what: 'Helps Claude Code or Codex find current web standards and browser support guidance, with a companion skill for Chrome extensions.',
+      useFor: ['Accessible layouts, forms and dialogs', 'Modern CSS and browser compatibility', 'Building Chrome extensions'],
+      say: 'Use modern-web-guidance to check the browser support and accessibility of my web page before changing it.',
+      members: [['modern-web-guidance', 'Searches current web platform guides. Requires Node.js 22 or newer and internet access.'],
+                ['chrome-extensions', 'Guides Manifest V3 extension development and Chrome Web Store preparation.']] },
+
     // ---------- Design & websites ----------
     { id: 'awwwards', title: 'Awwwards Website Builder', cat: 'design', icon: '🏆', level: 'medium', src: 'juliobsz', added: '2026-11-10',
       what: 'Builds an award-quality website from one sentence, aiming for the level of sites that win Awwwards "Site of the Day".',

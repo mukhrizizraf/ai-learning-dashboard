@@ -67,7 +67,8 @@
   "ui-ux-pro-max",
   "write-swift",
   "motionsites-web-builder",
-  "playwright-mcp"
+  "playwright-mcp",
+  "modern-web-guidance"
 ]);
   const known = new Set(ids);
   const src = (id, format = 'webp') => known.has(id) && ['webp', 'png'].includes(format) ? './assets/skills/' + id + '.' + format : '';
