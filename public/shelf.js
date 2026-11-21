@@ -158,6 +158,7 @@
   // ---------- install steps, written out so nobody has to open GitHub ----------
   function install(s) {
     const src = D.sources[s.src] || {};
+    if (src.setup) return { setup: src.setup, url: src.url };
     if (src.mcp) return { mcp: src.mcp, url: src.url };
     if (src.plugin) return { plugin: src.plugin, url: src.url };
     if (!src.repo) return { none: s.src };
@@ -202,7 +203,9 @@
       return `<h3>How to install</h3><p class="note" style="margin-top:0">${text}</p>`;
     }
     const block = (code, label) => `<pre class="code">${esc(code)}</pre><div class="code-row"><button class="btn small" type="button" data-copy="${esc(code)}" data-done="${esc(label)}">Copy</button></div>`;
-    const ways = i.mcp
+    const ways = i.setup
+      ? i.setup.map(([id, label, note, code]) => [id, label, `<p>${esc(note)}</p>${block(code, 'Copied! Now paste it into a terminal.')}`])
+      : i.mcp
       ? [['claude', 'Claude Code', `<p>Needs Node.js and Chrome. Run this in a terminal, then reopen Claude Code. This connects a browser tool.</p>${block(i.mcp.claude, 'Copied! Now paste it into a terminal.')}`],
          ['codex', 'Codex', `<p>Needs Node.js and Chrome. Run this in a terminal, then reopen Codex. Ask it to use the Playwright browser tools.</p>${block(i.mcp.codex, 'Copied! Now paste it into a terminal.')}`]]
       : i.plugin
@@ -293,7 +296,7 @@
       <p class="lead">${esc(s.what)}</p>
       <h3>Best for</h3><ul class="uses">${s.useFor.map(u => `<li>${esc(u)}</li>`).join('')}</ul>
       <h3>What to type</h3><div class="say"><p>“${esc(s.say)}”</p><button class="btn primary" type="button" data-copy="${esc(s.say)}">Copy</button></div>
-      <p class="note">${esc(D.levels[s.level].hint)} ${src.mcp ? 'After connecting, ask Claude Code or Codex to use the Playwright browser tools.' : `In Claude Code you can also type <code>/${esc(s.members ? s.members[0][0] : s.id)}</code> to start it right away.`}</p>
+      <p class="note">${esc(D.levels[s.level].hint)} ${src.usageNote ? esc(src.usageNote) : src.mcp ? 'After connecting, ask Claude Code or Codex to use the Playwright browser tools.' : `In Claude Code you can also type <code>/${esc(s.members ? s.members[0][0] : s.id)}</code> to start it right away.`}</p>
       ${installHtml(s)}
       ${s.members ? `<h3>What's inside this pack</h3><ul class="members">${s.members.map(([n, t]) => `<li><code>/${esc(n)}</code><br>${esc(t)}</li>`).join('')}</ul>` : ''}
       <div class="sheet-foot"><button class="btn" type="button" data-save="${esc(s.id)}" aria-pressed="${saved.has(s.id)}">${saved.has(s.id) ? 'Saved' : 'Save skill'}</button><button class="btn" type="button" data-share="${esc(s.id)}">Share skill</button></div></div>`;

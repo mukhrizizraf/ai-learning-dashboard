@@ -68,7 +68,10 @@
   "write-swift",
   "motionsites-web-builder",
   "playwright-mcp",
-  "modern-web-guidance"
+  "modern-web-guidance",
+  "ponytail",
+  "graphify",
+  "rtk"
 ]);
   const known = new Set(ids);
   const src = (id, format = 'webp') => known.has(id) && ['webp', 'png'].includes(format) ? './assets/skills/' + id + '.' + format : '';

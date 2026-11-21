@@ -735,5 +735,38 @@
     "appSize": 256,
     "transparent": true,
     "sha256": "93614958cf8ddaaac25f8ebdc50e202a2724eb94613cce6de7ca6a3cf7c74e84"
+  },
+  {
+    "id": "ponytail",
+    "title": "Ponytail",
+    "category": "coding",
+    "png": "ponytail.png",
+    "webp": "ponytail.webp",
+    "uploadSize": 512,
+    "appSize": 256,
+    "transparent": true,
+    "sha256": "3868fac15b207889528a5ddbfbad41e63d8394e3673073bc1c36ff9f38854f5b"
+  },
+  {
+    "id": "graphify",
+    "title": "Graphify",
+    "category": "coding",
+    "png": "graphify.png",
+    "webp": "graphify.webp",
+    "uploadSize": 512,
+    "appSize": 256,
+    "transparent": true,
+    "sha256": "3a3bd4a542847c68efd41e7934af4ddf165e60e8e2bc28593be6f73b3e8cedd9"
+  },
+  {
+    "id": "rtk",
+    "title": "RTK Terminal Compressor",
+    "category": "coding",
+    "png": "rtk.png",
+    "webp": "rtk.webp",
+    "uploadSize": 512,
+    "appSize": 256,
+    "transparent": true,
+    "sha256": "53a86c4903873300a26781fc887b17c66ae4ce1d53b587a629fd61fff952b27a"
   }
 ]

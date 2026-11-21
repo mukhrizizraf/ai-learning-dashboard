@@ -32,10 +32,10 @@
     // The browser sometimes skips the page transition and rejects a promise this page can't reach; don't report it as an error.
     addEventListener('unhandledrejection', e => { if (e.reason?.name === 'InvalidStateError' && /Transition was aborted/.test(e.reason.message)) e.preventDefault(); });
   </script>
-  <script defer src="./skills.js?v=20261121-modernweb"></script>
+  <script defer src="./skills.js?v=20261121-plugins"></script>
   <script defer src="./toys.js?v=20261113-jury"></script>
-  <script defer src="./skill-images.js?v=20261121-modernweb"></script>
-  <script defer src="./shelf.js?v=20261121-playwright"></script>
+  <script defer src="./skill-images.js?v=20261121-plugins"></script>
+  <script defer src="./shelf.js?v=20261121-plugins"></script>
   <script defer src="./app.js?v=20261112-books"></script>
   <script defer src="./motion.js?v=20261113-jury"></script>
 </head>
