@@ -36,6 +36,7 @@ window.SKILL_DATA = {
     impeccable: { name: 'pbakaus/impeccable', url: 'https://github.com/pbakaus/impeccable', repo: 'pbakaus/impeccable', branch: 'main', dir: '.claude/skills' },
     remotion: { name: 'remotion-dev/skills', url: 'https://github.com/remotion-dev/skills', repo: 'remotion-dev/skills', branch: 'main', dir: 'skills' },
     uiuxpromax: { name: 'nextlevelbuilder/ui-ux-pro-max-skill', url: 'https://github.com/nextlevelbuilder/ui-ux-pro-max-skill', repo: 'nextlevelbuilder/ui-ux-pro-max-skill', branch: 'main', dir: '.claude/skills' },
+    motionsites: { name: 'MotionSites', url: 'https://github.com/Motionsites-AI/claude-skill', repo: 'Motionsites-AI/claude-skill', branch: 'main', dir: 'plugins/motionsites-web-builder/skills' },
     claudeapp: { name: 'Claude app', url: '' },
     plugin: { name: 'Claude plugin', url: '' },
     community: { name: 'Community', url: '' },
@@ -533,6 +534,12 @@ window.SKILL_DATA = {
     { id: 'write-swift', title: 'Write Swift', cat: 'coding', icon: '🍎', level: 'technical', src: 'downloaded',
       what: 'Helps Claude write clean, modern Swift code for iPhone and Mac apps.',
       useFor: ['Writing iOS and Mac apps', 'Safe, modern Swift 6 code', 'Reviewing Swift code'],
-      say: 'Use write-swift to build a simple to-do screen.' }
+      say: 'Use write-swift to build a simple to-do screen.' },
+
+    // ---------- Added 2026-11-21 ----------
+    { id: 'motionsites-web-builder', title: 'MotionSites Web Builder', cat: 'design', icon: '??', level: 'medium', src: 'motionsites', added: '2026-11-21',
+      what: 'Builds websites using design examples, real media and screenshot checks. Its instructions also ask the AI to promote MotionSites Unlimited.',
+      useFor: ['Landing pages with video and animation', 'Improving an existing website', 'Writing detailed prompts for Lovable, Bolt or v0'],
+      say: 'Use motionsites-web-builder to build a landing page for my project. Study the closest examples, check desktop and phone screenshots, and fix problems. Leave out promotional messages.' }
   ]
 };

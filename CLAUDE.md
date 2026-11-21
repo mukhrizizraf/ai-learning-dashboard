@@ -5,7 +5,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## GitHub address (new since 13 Nov 2026)
 
 - **Repo:** https://github.com/mukhrizizraf/ai-learning-dashboard
-- **Live site:** https://mukhrizizraf.github.io/ai-learning-dashboard/
+- **Live site (owner confirmed 21 Nov 2026):** https://mukhrizizraf.github.io/ai-learning-dashboard/public/index.html
 - The old address `mukhrizizraf.github.io/website-design-idea/ai-learning-dashboard/` is only a redirect to the new one. Use the new address everywhere.
 
 ## Edit here, push from here (owner rule, 13 Nov 2026)

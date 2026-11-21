@@ -65,7 +65,8 @@
   "slideshow",
   "taste",
   "ui-ux-pro-max",
-  "write-swift"
+  "write-swift",
+  "motionsites-web-builder"
 ]);
   const known = new Set(ids);
   const src = (id, format = 'webp') => known.has(id) && ['webp', 'png'].includes(format) ? './assets/skills/' + id + '.' + format : '';

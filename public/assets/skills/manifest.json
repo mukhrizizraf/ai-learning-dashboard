@@ -702,5 +702,16 @@
     "appSize": 256,
     "transparent": true,
     "sha256": "237591b85ef301e62d8e04f628c4be234702bc6e298df7551c15301906e84e0b"
+  },
+  {
+    "id": "motionsites-web-builder",
+    "title": "MotionSites Web Builder",
+    "category": "design",
+    "png": "motionsites-web-builder.png",
+    "webp": "motionsites-web-builder.webp",
+    "uploadSize": 512,
+    "appSize": 256,
+    "transparent": true,
+    "sha256": "923465a7043427b4c3497f28825cb242a2328a17c8edaddac87ecfaee5e412af"
   }
 ]
