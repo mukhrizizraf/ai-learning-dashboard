@@ -21,6 +21,10 @@ window.SKILL_DATA = {
   // a skill folder lives at <repo>/<dir>/<skill id>. root:true means the whole repo is one skill.
   // plugin: commands to type inside Claude Code instead of copying folders.
   sources: {
+    unslop: { name: 'Damir Sokolovsky', url: 'https://github.com/heydamir/unslop', repo: 'heydamir/unslop', branch: 'main', dir: 'skills',
+      usageNote: 'Audits the screen and proposes a direction before editing. Live snapshots need project-local Playwright and Chromium; story videos also need FFmpeg.',
+      setup: [['claude', 'Claude Code', 'Run both lines in a terminal, then restart Claude Code or use /reload-plugins. Invoke /unslop or /unslop:unslop.', 'claude plugin marketplace add heydamir/unslop\nclaude plugin install unslop@heydamir'],
+              ['codex', 'Codex', 'Needs Node.js and Git. Install the skill, then start a new Codex thread and invoke $unslop.', 'npx -y skills add heydamir/unslop --skill unslop --agent codex --global --yes']] },
     lineart: { name: 'JDhruv14', url: 'https://github.com/JDhruv14/line-art-animation', repo: 'JDhruv14/line-art-animation', branch: 'main', dir: '', root: true,
       usageNote: 'Examples need Node.js 22.18 or newer. On Windows, video capture needs CHROME set to your Chrome or Chromium executable.',
       setup: [['claude', 'Claude Code', 'Needs Git. Clone the complete skill, including its library and examples, then restart Claude Code. Run npm ci inside that folder before running the examples.', 'git clone --depth 1 https://github.com/JDhruv14/line-art-animation.git "$HOME/.claude/skills/line-art-animation"'],
@@ -231,6 +235,10 @@ window.SKILL_DATA = {
     }
   ],
   skills: [
+    { id: 'unslop', title: 'Unslop', cat: 'design', icon: '📐', level: 'technical', src: 'unslop', added: '2026-11-21',
+      what: 'Reviews and polishes generic-looking interfaces in passes, covering spacing, colour, copy, typography, layout and motion.',
+      useFor: ['Auditing generic-looking screens', 'Polishing spacing, typography and copy', 'Before-and-after story videos'],
+      say: 'Use unslop to audit this screen and propose a design direction before making changes.' },
     { id: 'line-art-animation', title: 'Line Art Animation', cat: 'motion', icon: '✒️', level: 'technical', src: 'lineart', added: '2026-11-21',
       what: 'Builds interactive ink-on-paper SVG scenes with walking figures, moving clothes, wind and a day-night cycle.',
       useFor: ['Animated hand-drawn website scenes', 'Natural walking and running characters', 'Frame-by-frame video export'],

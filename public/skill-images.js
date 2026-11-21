@@ -73,7 +73,8 @@
   "graphify",
   "rtk",
   "lemo-opuscar",
-  "line-art-animation"
+  "line-art-animation",
+  "unslop"
 ]);
   const known = new Set(ids);
   const src = (id, format = 'webp') => known.has(id) && ['webp', 'png'].includes(format) ? './assets/skills/' + id + '.' + format : '';

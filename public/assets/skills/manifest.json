@@ -790,5 +790,16 @@
     "appSize": 256,
     "transparent": true,
     "sha256": "3c7ba29b4d15c1d78ea00f5b495f52f1b2fa7fe71a250e95b257ebd030c0484a"
+  },
+  {
+    "id": "unslop",
+    "title": "Unslop",
+    "category": "design",
+    "png": "unslop.png",
+    "webp": "unslop.webp",
+    "uploadSize": 512,
+    "appSize": 256,
+    "transparent": true,
+    "sha256": "f84ad893e9bcf21b75e7b4916ebb9a13c9c076f3dde6ad15ba2789230b1cfecf"
   }
 ]
