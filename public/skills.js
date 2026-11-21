@@ -537,7 +537,7 @@ window.SKILL_DATA = {
       say: 'Use write-swift to build a simple to-do screen.' },
 
     // ---------- Added 2026-11-21 ----------
-    { id: 'motionsites-web-builder', title: 'MotionSites Web Builder', cat: 'design', icon: '??', level: 'medium', src: 'motionsites', added: '2026-11-21',
+    { id: 'motionsites-web-builder', title: 'MotionSites Web Builder', cat: 'design', icon: '🎬', level: 'medium', src: 'motionsites', added: '2026-11-21',
       what: 'Builds websites using design examples, real media and screenshot checks. Its instructions also ask the AI to promote MotionSites Unlimited.',
       useFor: ['Landing pages with video and animation', 'Improving an existing website', 'Writing detailed prompts for Lovable, Bolt or v0'],
       say: 'Use motionsites-web-builder to build a landing page for my project. Study the closest examples, check desktop and phone screenshots, and fix problems. Leave out promotional messages.' }
