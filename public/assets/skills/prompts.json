@@ -201,6 +201,10 @@
     {
       "id": "rtk",
       "prompt": "Use case: stylized-concept. Asset type: one individual decorative app icon for a colourful AI skills library. ONE compact polished miniature 3D resin and frosted acrylic sculpture, rounded bevels, tactile substantial depth, isometric three-quarter view, soft upper-left studio lighting, a distinctive silhouette readable at 80 pixels. Bright cobalt, coral, amber, violet and ivory; avoid green as a dominant colour. Large centred subject occupying 78% of a square canvas, generous transparent padding, full object visible. Genuine transparent alpha background, no floor, no backdrop, no circular badge, no text, letters, logos, numbers or watermark. Subject: a compact cobalt terminal window with three raised ivory code-line bars entering a chunky violet compression funnel and emerging as one small amber bar. A coral lightning-bolt tab on the frame. Represents compact terminal output."
+    },
+    {
+      "id": "lemo-opuscar",
+      "prompt": "Use case: stylized-concept. Asset type: ONE decorative app icon for a colourful book-themed AI skill library. Create one compact polished miniature 3D sculpture: an ivory and cobalt director's clapperboard with a coral striped hinged top, a curved amber film strip curling around its lower corner, and one violet-tipped paintbrush leaning across it. A small translucent blue geometric gem sits inside the film strip. This represents directing artistic films drawn in code. Glossy toy-like resin and softly frosted acrylic, rounded bevels, substantial tactile depth, three-quarter isometric view, soft upper-left studio lighting. Distinctive silhouette readable at 80 pixels, large centred subject occupying 78% of a square canvas, generous transparent padding, entire object visible. Genuine transparent alpha background, no floor, no backdrop, no circular badge, no text, letters, logos, numbers or watermark."
     }
   ]
 }

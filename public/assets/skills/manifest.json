@@ -768,5 +768,16 @@
     "appSize": 256,
     "transparent": true,
     "sha256": "53a86c4903873300a26781fc887b17c66ae4ce1d53b587a629fd61fff952b27a"
+  },
+  {
+    "id": "lemo-opuscar",
+    "title": "Lemo-Opuscar Films",
+    "category": "motion",
+    "png": "lemo-opuscar.png",
+    "webp": "lemo-opuscar.webp",
+    "uploadSize": 512,
+    "appSize": 256,
+    "transparent": true,
+    "sha256": "288ba4a4a270160f74fb6bb99ba4239bcbb66c9cb3ae0cee7beb05385ec05c38"
   }
 ]

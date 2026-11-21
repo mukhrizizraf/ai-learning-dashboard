@@ -21,6 +21,10 @@ window.SKILL_DATA = {
   // a skill folder lives at <repo>/<dir>/<skill id>. root:true means the whole repo is one skill.
   // plugin: commands to type inside Claude Code instead of copying folders.
   sources: {
+    lemo: { name: 'Lemomo / LemoLab', url: 'https://github.com/lemomo-ai/lemo-opuscar', repo: 'lemomo-ai/lemo-opuscar', branch: 'main', dir: 'plugin/skills',
+      usageNote: 'Built for Claude; other agents may reproduce the styles differently. Needs Node.js 20+, FFmpeg 7+, and Python 3.11+ or uv. Windows setup uses Git Bash.',
+      setup: [['claude', 'Claude Code', 'Run both lines in a terminal, then restart Claude Code. Start with /lemo-opuscar:lemo-opuscar. The first film sets up its local rendering library.', 'claude plugin marketplace add lemomo-ai/lemo-opuscar\nclaude plugin install lemo-opuscar@lemolab'],
+              ['codex', 'Codex', 'Install the skill, then start a new Codex thread and use $lemo-opuscar. Node.js and Git are needed for this installer; the styles are designed for Claude.', 'npx -y skills add https://github.com/lemomo-ai/lemo-opuscar/tree/main/plugin/skills/lemo-opuscar --skill lemo-opuscar --agent codex --global --yes']] },
     ponytail: { name: 'Dietrich Gebert', url: 'https://github.com/DietrichGebert/ponytail', repo: 'DietrichGebert/ponytail', branch: 'main', dir: 'skills',
       usageNote: 'Restart your agent after installation. In Codex, trust the plugin lifecycle hooks when prompted.',
       setup: [['claude', 'Claude Code', 'Run both lines in a terminal, then restart Claude Code. Needs Node.js.', 'claude plugin marketplace add DietrichGebert/ponytail\nclaude plugin install ponytail@ponytail'],
@@ -223,6 +227,10 @@ window.SKILL_DATA = {
     }
   ],
   skills: [
+    { id: 'lemo-opuscar', title: 'Lemo-Opuscar Films', cat: 'motion', icon: '🎬', level: 'technical', src: 'lemo', added: '2026-11-21',
+      what: 'Directs short films drawn in code, with a library of visual styles and guides for story, animation, sound and rendering.',
+      useFor: ['Artistic animated explainers', 'Code-rendered promos and short films', 'Adapting a film style to your topic'],
+      say: 'Use lemo-opuscar to make a 10-second watercolor explainer about my topic. Show me a storyboard first.' },
     { id: 'ponytail', title: 'Ponytail', cat: 'coding', icon: '🔧', level: 'technical', src: 'ponytail', added: '2026-11-21',
       what: 'Guides Claude Code or Codex toward the smallest complete change, with reuse and standard tools before extra code.',
       useFor: ['Reducing unnecessary code', 'Reviewing overbuilt solutions', 'Choosing simpler dependencies'],
