@@ -31,6 +31,36 @@
   const isNew = s => s.added && (Date.now() - new Date(s.added + 'T00:00:00').getTime()) < 30 * 864e5;
   const skills = [...D.skills].sort((a, b) => (isNew(b) ? 1 : 0) - (isNew(a) ? 1 : 0));
   const items = [...collections, ...skills];
+  const searchAliases = {
+    pptx: 'make slides, create a presentation, slide decks',
+    docx: 'write a Word report, make a handout',
+    xlsx: 'clean a spreadsheet, make a budget tracker',
+    pdf: 'combine PDF files, join PDFs, extract PDF pages',
+    notebooklm: 'turn notes into audio, create a podcast',
+    watch: 'summarize a video, summarise a video, video transcript',
+    hyperframes: 'make an explainer video, create a short video',
+    unslop: 'polish a website, improve a web page',
+    'webapp-testing': 'test a website, check a web form',
+    'econ-agent-skills': 'analyse panel data, analyze panel data, write an economics paper',
+  };
+  function words(text) {
+    return text.toLowerCase().normalize('NFD').replace(/\p{M}/gu, '').replace(/['’]/g, '').match(/[\p{L}\p{N}]+/gu) || [];
+  }
+  const fillerWords = new Set('a an the i im me my you can could would please want need how do to for of with in on into from and it this that these'.split(' '));
+  const searchIndex = new Map(items.map(s => {
+    const lessons = (s.lessons || []).flatMap(l => [l.title, l.summary]);
+    const text = [s.title, s.id, s.what, s.say, searchAliases[s.id], cats[s.cat]?.label,
+      ...(s.useFor || []), ...(s.members || []).flat(), ...lessons].join(' ');
+    return [s, [...new Set(words(text))]];
+  }));
+  let searchTerms = [];
+  let searchTimer;
+  function setSearch(value) {
+    state.q = value.trim();
+    const queryWords = words(state.q);
+    const taskWords = queryWords.filter(word => !fillerWords.has(word));
+    searchTerms = taskWords.length ? taskWords : queryWords;
+  }
   let storageAvailable = true;
   function readPreference(key, fallback) {
     try { return JSON.parse(localStorage.getItem('skill-shelf:' + key)) ?? fallback; }
@@ -71,10 +101,7 @@
     if (state.savedOnly && !saved.has(s.id)) return false;
     if (state.cat !== 'all' && s.cat !== state.cat) return false;
     if (state.easy && s.level !== 'easy') return false;
-    if (!state.q) return true;
-    const extra = s.lessons ? s.lessons.flatMap(l => [l.title, l.summary]) : [];
-    const hay = [s.title, s.id, s.what, ...(s.useFor || []), cats[s.cat]?.label, ...(s.members || []).flat(), ...extra].join(' ').toLowerCase();
-    return state.q.toLowerCase().split(/\s+/).every(w => hay.includes(w));
+    return searchTerms.every(term => searchIndex.get(s).some(word => word.startsWith(term)));
   }
 
   // ---------- category tabs (toolbar) and phone tab bar ----------
@@ -139,15 +166,22 @@
   }
   const miniBook = s => `<span class="mini-book" style="--c:${coverOf.get(s.id) || COVERS[0]}" aria-hidden="true"><span>${window.SkillImages?.markup(s.id, false) || svg(glyphFor(s), 19)}</span></span>`;
   function renderShelf() {
+    clearTimeout(searchTimer);
     coverN = 0; prevC = ''; prevC2 = ''; cols = gridCols();
     const found = items.filter(matches);
     $('#surprise').disabled = !found.some(s => !s.lessons);
     $('#surprise').title = $('#surprise').disabled ? 'No matching skills. Change your filters to try again.' : 'Choose a skill from your current results';
-    $('#result').textContent = `${found.length} ${found.length === 1 ? 'skill' : 'skills'}${state.q ? ' found' : ''}`;
-    $('#reset-filters').hidden = !state.q && !state.easy && state.cat === 'all';
+    const result = `${found.length} ${found.length === 1 ? 'skill' : 'skills'}${state.q ? ' found' : ''}`;
+    if ($('#result').textContent !== result) $('#result').textContent = result;
+    const hasFilters = state.easy || state.cat !== 'all';
+    $('#reset-filters').hidden = found.length ? !state.q && !hasFilters : !state.q || !hasFilters;
     if (!found.length) {
       const noSaved = state.savedOnly && !saved.size;
-      $('#groups').innerHTML = `<div class="empty">${svg(noSaved ? 'M6 3h12v18l-6-4-6 4Z' : G.search)}<strong>${noSaved ? 'Keep your favourites here' : 'No matching skills'}</strong>${noSaved ? 'Tap the bookmark on any skill to save it.' : 'Try another search or clear your filters.'}<br><button class="btn" type="button" id="clear">${noSaved ? 'Browse skills' : 'Clear filters'}</button></div>`;
+      const hint = noSaved ? 'Tap the bookmark on any skill to save it.' : state.q
+        ? 'Try fewer words, a skill name, or a task like “make slides”.' : 'Try another category or clear your filters.';
+      const action = noSaved ? 'Browse skills' : state.q ? 'Clear search' : 'Clear filters';
+      const buttonId = state.q && !noSaved ? 'clear-search' : 'clear';
+      $('#groups').innerHTML = `<div class="empty">${svg(noSaved ? 'M6 3h12v18l-6-4-6 4Z' : G.search)}<strong>${noSaved ? 'Keep your favourites here' : 'No matching skills'}</strong>${hint}<br><button class="btn" type="button" id="${buttonId}">${action}</button></div>`;
       return;
     }
     $('#groups').innerHTML = D.categories.map(c => {
@@ -345,9 +379,13 @@
   // ---------- events ----------
   let lastSurprise = null;
   function render() { renderTabs(); renderShelf(); }
+  function clearSearch() {
+    $('#q').value = '';
+    setSearch('');
+  }
   function clearFilters() {
-    state.cat = 'all'; state.q = ''; state.easy = false;
-    $('#q').value = ''; $('#easy').checked = false;
+    state.cat = 'all'; state.easy = false;
+    clearSearch(); $('#easy').checked = false;
     savePreference('category', 'all'); updateCategoryUrl(); render();
   }
   function updateCategoryUrl() {
@@ -402,15 +440,20 @@
       sheet.querySelectorAll('.way-panel').forEach(p => { p.hidden = p.dataset.panel !== t.dataset.way; });
     }
     else if (t.hasAttribute('data-close')) closeSheet(t.closest('dialog'));
-    else if (t.id === 'clear' || t.id === 'reset-filters') { if (state.savedOnly && !saved.size) state.savedOnly = false; clearFilters(); }
+    else if (t.id === 'clear-search') { clearSearch(); renderShelf(); $('#q').focus(); }
+    else if (t.id === 'clear' || t.id === 'reset-filters') { if (state.savedOnly && !saved.size) state.savedOnly = false; clearFilters(); $('#q').focus(); }
     else if (t.id === 'open-guide' || t.hasAttribute('data-guide')) $('#guide').showModal();
     else if (t.id === 'share-page') copy(pageUrl(), 'Link copied!');
   });
-  $('#q').addEventListener('input', e => { state.q = e.target.value.trim(); renderShelf(); });
+  $('#q').addEventListener('input', e => {
+    setSearch(e.target.value);
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(renderShelf, 180);
+  });
   $('#easy').addEventListener('change', e => { state.easy = e.target.checked; renderShelf(); });
   document.addEventListener('keydown', e => {
     if (e.key === '/' && !e.ctrlKey && !e.metaKey && !e.altKey && !e.target.closest('input, textarea, [contenteditable="true"]') && !document.querySelector('dialog[open]')) { e.preventDefault(); $('#q').focus(); }
-    if (e.key === 'Escape' && e.target === $('#q') && state.q) { e.preventDefault(); $('#q').value = ''; state.q = ''; renderShelf(); }
+    if (e.key === 'Escape' && e.target === $('#q') && state.q) { e.preventDefault(); clearSearch(); renderShelf(); }
     if (e.target.matches('.way') && ['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(e.key)) {
       e.preventDefault(); const ways = [...e.target.parentElement.querySelectorAll('.way')];
       const n = e.key === 'Home' ? 0 : e.key === 'End' ? ways.length - 1 : (ways.indexOf(e.target) + (e.key === 'ArrowRight' ? 1 : -1) + ways.length) % ways.length;

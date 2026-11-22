@@ -26,7 +26,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Serif:ital@0;1&display=swap">
   <link rel="stylesheet" href="./pop.css?v=20261112-cards">
-  <link rel="stylesheet" href="./shelf.css?v=20261122-stacks">
+  <link rel="stylesheet" href="./shelf.css?v=20261122-task-search">
   <link rel="stylesheet" href="./skill-images.css?v=20261113-art">
   <script>
     // The browser sometimes skips the page transition and rejects a promise this page can't reach; don't report it as an error.
@@ -38,7 +38,7 @@
   <link rel="stylesheet" href="./skill-previews.css?v=20261122-previews">
   <script defer src="./preview-data.js?v=20261122-epistemic"></script>
   <script defer src="./skill-previews.js?v=20261122-previews"></script>
-  <script defer src="./shelf.js?v=20261122-stacks"></script>
+  <script defer src="./shelf.js?v=20261122-task-search"></script>
   <script defer src="./app.js?v=20261112-books"></script>
   <script defer src="./motion.js?v=20261113-jury"></script>
 </head>
@@ -56,7 +56,7 @@
       <button class="btn combos-button" type="button" id="open-combinations" aria-label="Skill combinations" title="Skill combinations"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h4a3 3 0 0 1 3 3v4a3 3 0 0 0 3 3h1M7 17h4a3 3 0 0 0 3-3v-4a3 3 0 0 1 3-3h1"/><circle cx="5" cy="7" r="2"/><circle cx="5" cy="17" r="2"/><circle cx="19" cy="7" r="2"/><circle cx="19" cy="17" r="2"/></svg><span class="combos-label">Skill combinations</span></button>
       <label class="search">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 16l5 5M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0"/></svg>
-        <input id="q" type="search" enterkeyhint="search" autocapitalize="none" placeholder="Search skills" aria-label="Search skills" autocomplete="off">
+        <input id="q" type="search" enterkeyhint="search" autocapitalize="none" placeholder="Task or skill" aria-label="Search by task or skill" autocomplete="off">
         <kbd aria-hidden="true">/</kbd>
       </label>
       <label class="easy"><input type="checkbox" id="easy" aria-label="Easy">Easy</label>
