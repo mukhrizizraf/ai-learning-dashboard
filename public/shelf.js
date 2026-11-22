@@ -394,6 +394,42 @@
     else url.searchParams.set('cat', state.cat);
     history.replaceState(history.state, '', url);
   }
+
+  // A swipe on the books selects the adjacent tab. The strip itself scrolls normally.
+  const shelf = $('#shelf');
+  const phoneWidth = matchMedia('(max-width: 760px)');
+  let swipeStart;
+  let swiped = false;
+  shelf.addEventListener('pointerdown', e => {
+    swiped = false;
+    swipeStart = undefined;
+    if (phoneWidth.matches && !state.savedOnly && e.pointerType === 'touch' && e.isPrimary) {
+      swipeStart = { id: e.pointerId, x: e.clientX, y: e.clientY };
+    }
+  });
+  shelf.addEventListener('pointercancel', () => { swipeStart = undefined; });
+  shelf.addEventListener('pointerup', e => {
+    if (swipeStart?.id !== e.pointerId) return;
+    const dx = e.clientX - swipeStart.x;
+    const dy = e.clientY - swipeStart.y;
+    swipeStart = undefined;
+    if (Math.abs(dx) < 56 || Math.abs(dx) < Math.abs(dy) * 1.8) return;
+
+    // Some browsers dispatch a click after a touch sequence on a button.
+    swiped = true;
+    const current = $('#tabs [aria-current="true"]');
+    const next = dx < 0 ? current.nextElementSibling : current.previousElementSibling;
+    if (!next) return;
+    next.click();
+    next.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'instant' });
+  });
+  shelf.addEventListener('click', e => {
+    if (!swiped || e.detail === 0) return;
+    swiped = false;
+    e.preventDefault();
+    e.stopPropagation();
+  }, true);
+
   document.addEventListener('click', e => {
     const t = e.target.closest('button, a'); if (!t) return;
     if (t.id === 'open-combinations') $('#combinations').showModal();

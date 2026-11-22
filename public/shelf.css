@@ -257,7 +257,7 @@ code{font-family:var(--mono);font-size:.85em}
   .tabs{flex-direction:row;gap:4px}
   .tab{flex:none;width:auto;min-width:72px;min-height:70px;padding:6px 8px;font-size:.8125rem}
   .tab .dock-toy{--toy:34px}
-  .shelf{padding:4px max(14px,env(safe-area-inset-right,0px)) calc(110px + env(safe-area-inset-bottom,0px)) max(14px,env(safe-area-inset-left,0px))}
+  .shelf{touch-action:pan-y pinch-zoom;padding:4px max(14px,env(safe-area-inset-right,0px)) calc(110px + env(safe-area-inset-bottom,0px)) max(14px,env(safe-area-inset-left,0px))}
   .group{margin-top:22px}
   .group-head h2{font-size:1.1rem}
   .rows{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 14px}
