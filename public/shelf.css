@@ -84,6 +84,8 @@ svg{flex:none}
 .btn.small{min-height:36px;padding:6px 12px;font-size:.75rem}
 .btn:active{scale:.96}
 .install-button{flex:none;white-space:nowrap}
+.combos-button{flex:none;white-space:nowrap}
+.combos-button svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .link{border:0;background:transparent;padding:8px 0;font-size:.8125rem;font-weight:700;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
 
 /* ---------- Shelf ---------- */
@@ -201,6 +203,19 @@ dialog[open] .sheet>:nth-child(2){animation-delay:.05s}dialog[open] .sheet>:nth-
 .lesson p,.lesson li{font-size:.8125rem;line-height:1.7;color:var(--ink-2)}
 .lesson h4{margin:12px 0 6px;font-size:.8125rem}
 code{font-family:var(--mono);font-size:.85em}
+#combinations{width:min(760px,calc(100% - 28px))}
+#combinations .sheet{padding-top:22px}
+.combo{padding:22px 0;border-bottom:1px solid var(--line)}
+.combo h3{margin:0;font-size:1.05rem;line-height:1.3}
+.combo-when,.combo-why{margin-top:8px;color:var(--ink-2);font-size:.875rem;line-height:1.6}
+.combo-steps{display:grid;gap:0;margin:16px 0 0;padding:0;list-style:none}
+.combo-step{display:grid;grid-template-columns:30px minmax(0,1fr);gap:10px;padding:9px 0}
+.combo-step:not(:last-child){border-bottom:1px solid var(--line)}
+.combo-n{display:grid;place-items:center;width:28px;height:28px;border-radius:9px;background:var(--chip);font-size:.75rem;font-weight:800}
+.combo-skill{padding:0;border:0;background:none;color:var(--ink);font:700 .875rem/1.35 var(--ui);text-align:left;text-decoration:underline;text-decoration-color:#aaa5b0;text-underline-offset:3px;cursor:pointer}
+.combo-skill:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:4px}
+.combo-step p{margin-top:3px;color:var(--ink-3);font-size:.8125rem;line-height:1.55}
+.combo-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 
 #toast{position:fixed;left:50%;bottom:28px;z-index:100;max-width:calc(100% - 40px);width:max-content;padding:12px 18px;border-radius:14px;background:var(--ink);color:#fff;font-size:.875rem;font-weight:600;box-shadow:0 12px 30px rgba(29,29,31,.3);opacity:0;translate:-50% 10px;pointer-events:none;transition:opacity .2s,translate .4s var(--spring)}
 #toast.show{opacity:1;translate:-50% 0}
@@ -211,6 +226,8 @@ code{font-family:var(--mono);font-size:.85em}
   .bar{padding:12px 20px;gap:10px}
   .shelf{padding:8px 20px 56px}
   .easy{padding:0 12px}
+  .combos-button{width:46px;padding:0}
+  .combos-label{display:none}
 }
 
 /* ---------- Phones ---------- */
@@ -218,17 +235,22 @@ code{font-family:var(--mono);font-size:.85em}
   :root{--bar:64px}
   html{scroll-padding-top:150px}
   .app{grid-template-columns:minmax(0,1fr);grid-template-areas:"bar" "rail" "main"}
-  .bar{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:10px;padding:calc(10px + env(safe-area-inset-top,0px)) max(14px,env(safe-area-inset-right,0px)) 10px max(14px,env(safe-area-inset-left,0px))}
+  .bar{display:grid;grid-template-columns:auto minmax(0,1fr) auto auto;gap:10px;padding:calc(10px + env(safe-area-inset-top,0px)) max(14px,env(safe-area-inset-right,0px)) 10px max(14px,env(safe-area-inset-left,0px))}
   .bar-home{display:grid;place-items:center;width:46px;height:46px;border-radius:14px;background:var(--surface);border:1.5px solid var(--line)}
   .bar-home img{width:28px;height:28px}
   .bar-title{flex-direction:column;align-items:flex-start;gap:0}
   .bar-title h1{font-size:1.35rem}
   .result{font-size:.75rem}
-  .search{grid-column:1/-1;grid-row:2;max-width:none;margin:0}
+  .combos-button{grid-column:3;grid-row:1;width:46px;height:46px;padding:0;border-radius:14px}
+  .combos-button svg{width:20px;height:20px}
+  .combos-label{display:none}
+  .search{grid-column:1/4;grid-row:2;max-width:none;margin:0}
   .search input{font-size:16px}
   .search kbd{display:none}
-  .easy{grid-column:3;grid-row:2;height:46px;padding:0 13px}
-  .search{grid-column:1/3}
+  .easy{grid-column:4;grid-row:2;height:46px;padding:0 13px}
+  #combinations .sheet{padding:16px 18px 24px}
+  #combinations .sheet-top{margin:-16px -18px 0;padding:16px 18px 12px}
+  .combo{padding:18px 0}
   .install-button{display:none}
   .rail{position:sticky;top:calc(122px + env(safe-area-inset-top,0px));height:auto;flex-direction:row;align-items:stretch;gap:0;padding:8px max(10px,env(safe-area-inset-left,0px));border-right:0;border-bottom:1px solid var(--line);overflow-x:auto;overflow-y:hidden;z-index:24;background:rgba(255,255,255,.96)}
   .rail-home,.rail-guide{display:none}

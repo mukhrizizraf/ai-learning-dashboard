@@ -6,6 +6,25 @@
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   if (!D) { $('#groups').innerHTML = '<p class="empty"><strong>The skills did not load.</strong>Keep skills.js in the same folder as this page.</p>'; return; }
 
+  const COMBINATIONS = [
+    { title: 'Polish and check a website', when: 'You have a site or app that needs a clearer design and a final browser check.',
+      steps: [['modern-web-guidance', 'Check current browser, accessibility and platform guidance before editing.'], ['ui-ux-pro-max', 'Choose a fitting style, colours and type for the interface.'], ['unslop', 'Review the screen and make focused visual improvements.'], ['playwright-mcp', 'Open the result in a browser and check the main interactions.']],
+      why: 'The stack moves from current constraints to design choices, then polish and a real browser check.',
+      prompt: 'Improve this website in stages. First use modern-web-guidance to check current browser and accessibility guidance. Then use ui-ux-pro-max to choose a clear visual direction, use unslop to audit and polish the interface, and use Playwright Browser to check the finished page at desktop and phone widths. Show me the proposed direction before broad changes, and report what you checked.' },
+    { title: 'Understand and fix an unfamiliar app', when: 'A program behaves strangely and you need to trace the cause before changing code.',
+      steps: [['reverse-engineer-anything', 'Inspect the running app and record what it actually does.'], ['graphify', 'Map the code and trace the likely functions and dependencies.'], ['ponytail', 'Make the smallest complete fix that addresses the evidence.']],
+      why: 'One skill gathers runtime evidence, one follows the code paths, and one keeps the repair focused.',
+      prompt: 'Investigate this unfamiliar app before editing. Use reverse-engineer-anything to reproduce and record the behaviour, graphify to trace the relevant code paths, then Ponytail to propose the smallest complete fix. Show me the evidence and proposed change before making edits.' },
+    { title: 'Take a panel study from method to paper', when: 'You have a panel-data research question and want a reproducible analysis and a paper draft.',
+      steps: [['auto-empirical-research-skills', 'Find a suitable empirical workflow and method-specific skill.'], ['python-panel-data', 'Plan and run an appropriate panel or causal analysis after the design is confirmed.'], ['academic-paper-writer', 'Draft the paper from the actual code, estimates and results.']],
+      why: 'The first step routes the research task; the next handles the analysis; the last ties the writing back to real results.',
+      prompt: 'Help me take this panel-data study from method choice to a paper. Start with auto-empirical-research-skills to identify a suitable workflow. Use python-panel-data to plan the analysis and ask me to confirm the research question, data structure and design before estimation. Then use academic-paper-writer to draft from the actual code and results only; flag anything not yet established.' },
+    { title: 'Turn a video reference into an explainer', when: 'You have a lecture or demo video and want to create a new short visual explanation from its key ideas.',
+      steps: [['watch', 'Review available captions and timestamped frames to identify the key ideas.'], ['hyperframes', 'Build an original short video with titles, captions or charts from the approved outline.']],
+      why: 'One skill helps understand the reference; the other turns the agreed outline into a rendered video.',
+      prompt: 'Use watch to review this video and list its key ideas with timestamps. Propose an original 20-second explainer outline based on those ideas, show it to me, and after I approve use hyperframes to build and render it. Do not invent facts that are absent from the source.' }
+  ];
+
   const BS = '\\';
   const cats = Object.fromEntries(D.categories.map(c => [c.id, c]));
   const collections = D.collections || [];
@@ -33,6 +52,11 @@
     docs: 'M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z M14 2v6h6', coding: 'M16 18l6-6-6-6 M8 6l-6 6 6 6',
     workflow: 'M6 6h12v12H6z M9 9h6v6H9z M9 2v4 M15 2v4 M9 18v4 M15 18v4 M2 9h4 M2 15h4 M18 9h4 M18 15h4' };
   const svg = (d, w = 16) => `<svg viewBox="0 0 24 24" width="${w}" height="${w}" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="${d}"/></svg>`;
+
+  $('#combination-list').innerHTML = COMBINATIONS.map(combo => `<section class="combo"><h3>${esc(combo.title)}</h3><p class="combo-when"><strong>Use this when:</strong> ${esc(combo.when)}</p><ol class="combo-steps">${combo.steps.map(([id, detail], i) => {
+    const skill = items.find(item => item.id === id);
+    return `<li class="combo-step"><span class="combo-n" aria-hidden="true">${i + 1}</span><div><button class="combo-skill" type="button" data-combo-skill="${esc(id)}">${esc(skill?.title || id)}</button><p>${esc(detail)}</p></div></li>`;
+    }).join('')}</ol><p class="combo-why"><strong>Why the stack helps:</strong> ${esc(combo.why)}</p><div class="combo-actions"><button class="btn primary" type="button" aria-label="Copy workflow: ${esc(combo.title)}" data-copy="${esc(combo.prompt)}" data-done="Workflow copied. Paste it into your assistant.">Copy workflow</button></div></section>`).join('');
 
   // ---------- small helpers ----------
   function toast(msg) { const t = $('#toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove('show'), 2400); }
@@ -334,7 +358,9 @@
   }
   document.addEventListener('click', e => {
     const t = e.target.closest('button, a'); if (!t) return;
-    if (t.dataset.view) {
+    if (t.id === 'open-combinations') $('#combinations').showModal();
+    else if (t.dataset.comboSkill) { $('#combinations').close(); lastClick = t; openSkill(t.dataset.comboSkill); }
+    else if (t.dataset.view) {
       state.view = t.dataset.view; $('#shelf').dataset.view = state.view;
       savePreference('view', state.view);
       document.querySelectorAll('[data-view][aria-pressed]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.view === state.view)));
