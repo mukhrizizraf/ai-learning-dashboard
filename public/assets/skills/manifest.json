@@ -812,5 +812,16 @@
     "appSize": 256,
     "transparent": true,
     "sha256": "f6ab43e1475b79155c6d87f8e325730fa93178fccccb199c8b061ca006f3a52f"
+  },
+  {
+    "id": "auto-empirical-research-skills",
+    "title": "Empirical Research Library",
+    "category": "writing",
+    "png": "auto-empirical-research-skills.png",
+    "webp": "auto-empirical-research-skills.webp",
+    "uploadSize": 512,
+    "appSize": 256,
+    "transparent": true,
+    "sha256": "f10145b8bca0daf0edaaf3809b21c44195deb0ea5723f77f0013484ec8fcff9a"
   }
 ]

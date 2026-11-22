@@ -291,6 +291,11 @@
       "id": "econ-agent-skills",
       "prompt": "Use case: stylized-concept. Asset type: ONE decorative app icon for an existing colourful book-themed AI skills library. Create a single compact miniature 3D sculpture: an open ivory research notebook with a thick cobalt cover, a small upright coral chart card with two simple amber and violet data-series lines, and a cobalt magnifying glass resting on one corner. Three small amber index tabs mark the book's pages. Represents an econometrics research skill pack covering data, causal analysis, papers and presentations. Glossy toy-like resin and softly frosted acrylic, rounded bevels, substantial tactile depth, isometric three-quarter view, soft upper-left studio lighting, distinctive silhouette readable at 80 pixels. The whole object occupies at most 75% of a square canvas with at least 12% completely transparent margin. Genuine transparent alpha: all pixels outside the object silhouette exactly alpha zero. No floor, backdrop, haze, external cast shadow, glow, circular badge, text, letters, numbers, logos or watermark.",
       "revised": "2026-11-22"
+    },
+    {
+      "id": "auto-empirical-research-skills",
+      "prompt": "Use case: stylized-concept. Asset type: ONE decorative app icon for an existing colourful book-themed AI skills library. Create a single compact miniature 3D sculpture: three upright ivory research books with cobalt, coral and violet spines on a small amber shelf, a cobalt magnifying glass examining a front page, and a tiny branching path with three rounded coloured nodes embossed on the front book. This represents a searchable research-skill catalogue that routes a question to the right method. Glossy toy-like resin and softly frosted acrylic, rounded bevels, substantial tactile depth, isometric three-quarter view, soft upper-left studio lighting, distinctive silhouette readable at 80 pixels. The whole object occupies at most 75% of a square canvas with at least 12% completely transparent margin. Genuine transparent alpha: all pixels outside the object silhouette exactly alpha zero. No floor, backdrop, haze, external cast shadow, glow, circular badge, text, letters, numbers, logos or watermark.",
+      "revised": "2026-11-22"
     }
   ]
 }

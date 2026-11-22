@@ -170,6 +170,13 @@
       "candidates": [
         "https://raw.githubusercontent.com/Motionsites-AI/claude-skill/main/preview-media.jpg"
       ]
+    },
+    {
+      "repository": "brycewang-stanford/Auto-Empirical-Research-Skills",
+      "revision": "7c85ad2c0515b83148b1084be373effbc265ae3b",
+      "readme": "https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills/blob/main/README-en.md",
+      "candidates": [],
+      "note": "The root README describes a catalog router. A labelled local routing illustration explains this entry without implying that an econometric model was run."
     }
   ]
 }

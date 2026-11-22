@@ -75,7 +75,8 @@
   "lemo-opuscar",
   "line-art-animation",
   "unslop",
-  "econ-agent-skills"
+  "econ-agent-skills",
+  "auto-empirical-research-skills"
 ]);
   const known = new Set(ids);
   const src = (id, format = 'webp') => known.has(id) && ['webp', 'png'].includes(format) ? './assets/skills/' + id + '.' + format : '';

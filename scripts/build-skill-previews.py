@@ -46,6 +46,7 @@ GROUPS = {
     'standards': 'modern-web-guidance',
     'lineart': 'line-art-animation',
     'econ': 'econ-agent-skills',
+    'research-router': 'auto-empirical-research-skills',
 }
 CAPTIONS = {
     'website': 'A page layout with a clear headline, useful content and a main action.',
@@ -82,6 +83,7 @@ CAPTIONS = {
     'standards': 'A current web-platform pattern with browser-support guidance.',
     'lineart': 'A small SVG scene with moving characters and changing light.',
     'econ': 'A research workflow linking data checks, estimation and written results.',
+    'research-router': 'A research question is matched to a suitable skill, whose instructions are loaded before any analysis runs.',
 }
 SPECIAL = {
     'animation-vocabulary': ('Motion vocabulary', 'Anticipation', 'Ease out', 'Follow through'),
@@ -140,6 +142,8 @@ def plot():
 
 
 def make_body(skill, kind):
+    if kind == 'research-router':
+        return '<h1>Find a workflow for your research</h1><div class="panel gap"><span class="tag">Your question</span><h2 class="gap">Which skill fits a staggered DiD study?</h2></div><div class="steps gap"><div class="step"><h3>Search the catalog</h3><p class="small gap">Match the method and research stage</p></div><div class="arrow">&#8594;</div><div class="step"><h3>Select a skill</h3><p class="small gap">Read its instructions and references</p></div><div class="arrow">&#8594;</div><div class="step"><h3>Confirm the design</h3><p class="small gap">Check the data before estimation</p></div></div><p class="small gap">Covers econometrics, literature reviews, data work, writing and replication.</p>'
     title = ESC(skill['title'])
     special = SPECIAL.get(skill['id'], (skill['title'], 'Start', 'Refine', 'Check'))
     labels = [ESC(x) for x in special[1:]]

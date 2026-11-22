@@ -21,6 +21,10 @@ window.SKILL_DATA = {
   // a skill folder lives at <repo>/<dir>/<skill id>. root:true means the whole repo is one skill.
   // plugin: commands to type inside Claude Code instead of copying folders.
   sources: {
+    aers: { name: 'AERS contributors', url: 'https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills', repo: 'brycewang-stanford/Auto-Empirical-Research-Skills', branch: 'main', root: true,
+      usageNote: 'One catalog router selects a relevant bundled skill. Python 3 runs its local catalog search; individual workflows can require R, Stata, Python packages, accounts or other software. Keep the bundled licence files.',
+      setup: [['claude', 'Claude Code', 'Run this in a terminal. Needs Git. The submodule option also downloads Paper-WorkFlow. Restart Claude Code, then ask for auto-empirical-research-skills. Existing folders are preserved because Git refuses to clone over them.', 'git clone --recurse-submodules https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills.git "$HOME/.claude/skills/auto-empirical-research-skills"'],
+              ['codex', 'Codex', 'Run this in a terminal. Needs Git. Installs one router in the recommended Codex skills folder, with the paper-workflow submodule. It will be available on your next turn; restart if it does not appear.', 'git clone --recurse-submodules https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills.git "$HOME/.agents/skills/auto-empirical-research-skills"']] },
     econagents: { name: 'Jonas Weinert', url: 'https://github.com/JonasWeinert/EconAgentSkills', repo: 'JonasWeinert/EconAgentSkills', branch: 'main', dir: '_skills',
       usageNote: 'Research instructions and examples. Analyses require the relevant R, Stata, Python or Julia tools; tables and slides may require LaTeX.',
       setup: [['claude', 'Ask Claude Code', 'Paste this request into Claude Code. It includes the shared-policy repair needed when these folders are installed individually.', 'Install all 10 skills from https://github.com/JonasWeinert/EconAgentSkills into ~/.claude/skills. Preserve any existing copies. Copy _skills/AGENT_POLICY.md into each installed skill folder as AGENT_POLICY.md, then change each SKILL.md policy link from ../../AGENT_POLICY.md to AGENT_POLICY.md. Verify that the policy and companion-skill links resolve.', 'Copied! Paste this request into Claude Code.'],
@@ -239,6 +243,10 @@ window.SKILL_DATA = {
     }
   ],
   skills: [
+    { id: 'auto-empirical-research-skills', title: 'Empirical Research Library', cat: 'writing', icon: '📚', level: 'technical', src: 'aers', added: '2026-11-22',
+      what: 'Searches a catalog of research skills and loads a suitable workflow for econometrics, literature reviews, data work or paper writing.',
+      useFor: ['Choosing causal-inference and econometrics workflows', 'Finding literature, writing and replication skills', 'Planning a research project before running models'],
+      say: 'Use auto-empirical-research-skills to choose a skill for staggered difference-in-differences. Name the selected skill, explain why it fits, and ask about my data before running analysis.' },
     { id: 'econ-agent-skills', title: 'Econ Research Pack', cat: 'writing', icon: '📊', level: 'technical', src: 'econagents', added: '2026-11-22',
       what: 'Ten skills for research data, econometric analysis, academic papers, tables, charts and presentations.',
       useFor: ['Cleaning and documenting research data', 'Planning econometric workflows', 'Writing papers, tables and slides'],
