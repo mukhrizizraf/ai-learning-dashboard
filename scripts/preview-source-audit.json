@@ -177,6 +177,13 @@
       "readme": "https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills/blob/main/README-en.md",
       "candidates": [],
       "note": "The root README describes a catalog router. A labelled local routing illustration explains this entry without implying that an econometric model was run."
+    },
+    {
+      "repository": "NikolasMarkou/epistemic-deconstructor",
+      "revision": "bfa255cb90eedaaaeadd003cf366a6de1723bc2e",
+      "readme": "https://github.com/NikolasMarkou/epistemic-deconstructor/blob/main/README.md",
+      "candidates": [],
+      "note": "README has text walkthroughs and badges; the local sample explains evidence and hypotheses without claiming a real investigation result."
     }
   ]
 }

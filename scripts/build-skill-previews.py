@@ -47,6 +47,7 @@ GROUPS = {
     'lineart': 'line-art-animation',
     'econ': 'econ-agent-skills',
     'research-router': 'auto-empirical-research-skills',
+    'investigation': 'epistemic-deconstructor',
 }
 CAPTIONS = {
     'website': 'A page layout with a clear headline, useful content and a main action.',
@@ -84,6 +85,7 @@ CAPTIONS = {
     'lineart': 'A small SVG scene with moving characters and changing light.',
     'econ': 'A research workflow linking data checks, estimation and written results.',
     'research-router': 'A research question is matched to a suitable skill, whose instructions are loaded before any analysis runs.',
+    'investigation': 'Competing explanations are tested against observations, with evidence, remaining uncertainty and the next useful test recorded.',
 }
 SPECIAL = {
     'animation-vocabulary': ('Motion vocabulary', 'Anticipation', 'Ease out', 'Follow through'),
@@ -142,6 +144,8 @@ def plot():
 
 
 def make_body(skill, kind):
+    if kind == 'investigation':
+        return '<h1>How does this unknown system work?</h1><div class="row gap"><div class="panel"><h3>Competing explanations</h3><p class="gap">H1 &nbsp; Fixed request limit</p><p class="gap">H2 &nbsp; Replenishing token bucket</p><p class="gap">H3 &nbsp; Network timing noise</p></div><div class="paper"><h3>Evidence log</h3><p class="gap">Burst traffic is rejected.<br>Steady traffic continues.</p><div class="rule"></div><h3>Next useful test</h3><p class="gap">Vary the pause before retrying.</p></div></div><p class="small gap">Observe &#8594; Test &#8594; Validate: compare predictions to a simple baseline.</p>'
     if kind == 'research-router':
         return '<h1>Find a workflow for your research</h1><div class="panel gap"><span class="tag">Your question</span><h2 class="gap">Which skill fits a staggered DiD study?</h2></div><div class="steps gap"><div class="step"><h3>Search the catalog</h3><p class="small gap">Match the method and research stage</p></div><div class="arrow">&#8594;</div><div class="step"><h3>Select a skill</h3><p class="small gap">Read its instructions and references</p></div><div class="arrow">&#8594;</div><div class="step"><h3>Confirm the design</h3><p class="small gap">Check the data before estimation</p></div></div><p class="small gap">Covers econometrics, literature reviews, data work, writing and replication.</p>'
     title = ESC(skill['title'])
