@@ -1,0 +1,184 @@
+{
+  "unslop": {
+    "label": "Creator's example",
+    "caption": "An example design pass from the Unslop repository.",
+    "images": [
+      {
+        "src": "assets/previews/unslop-after.webp",
+        "width": 900,
+        "height": 900,
+        "label": "After",
+        "alt": "Dashboard redesign example published by Unslop author Damir Sokolovsky."
+      },
+      {
+        "src": "assets/previews/unslop-before.webp",
+        "width": 1280,
+        "height": 800,
+        "label": "Before",
+        "alt": "Original example dashboard supplied in the Unslop repository."
+      }
+    ],
+    "credit": {
+      "name": "Damir Sokolovsky",
+      "url": "https://github.com/heydamir/unslop",
+      "license": "CC BY 4.0"
+    }
+  },
+  "line-art-animation": {
+    "label": "Creator's example",
+    "caption": "The author's animated village, shown in daylight and at night.",
+    "images": [
+      {
+        "src": "assets/previews/line-art-day.webp",
+        "width": 1280,
+        "height": 640,
+        "label": "Day",
+        "alt": "The Line Art Animation author's village example during day."
+      },
+      {
+        "src": "assets/previews/line-art-night.webp",
+        "width": 1280,
+        "height": 640,
+        "label": "Night",
+        "alt": "The Line Art Animation author's village example during night."
+      }
+    ],
+    "credit": {
+      "name": "JDhruv14",
+      "url": "https://github.com/JDhruv14/line-art-animation",
+      "license": "MIT"
+    }
+  },
+  "lemo-opuscar": {
+    "label": "Creator's example",
+    "caption": "A frame from the author's watercolor-style demo film.",
+    "images": [
+      {
+        "src": "assets/previews/lemo-watercolor.webp",
+        "width": 1280,
+        "height": 720,
+        "label": "Example",
+        "alt": "A watercolor-style film frame published in the Lemo-Opuscar style gallery."
+      }
+    ],
+    "credit": {
+      "name": "Lemomo / LemoLab",
+      "url": "https://github.com/lemomo-ai/lemo-opuscar",
+      "license": "CC BY-NC 4.0"
+    }
+  },
+  "graphify": {
+    "label": "Creator's example",
+    "caption": "A code knowledge graph from the author's graph viewer.",
+    "images": [
+      {
+        "src": "assets/previews/graphify-creator.webp",
+        "width": 1280,
+        "height": 633,
+        "label": "Example",
+        "alt": "A code knowledge graph from the author's graph viewer."
+      }
+    ],
+    "credit": {
+      "name": "Graphify Labs",
+      "url": "https://github.com/Graphify-Labs/graphify"
+    },
+    "sourceImage": "https://raw.githubusercontent.com/Graphify-Labs/graphify/v8/docs/graph-hero.png"
+  },
+  "rtk": {
+    "label": "Creator's example",
+    "caption": "The author's example of terminal output before and after compression.",
+    "images": [
+      {
+        "src": "assets/previews/rtk-creator.webp",
+        "width": 1280,
+        "height": 560,
+        "label": "Example",
+        "alt": "The author's example of terminal output before and after compression."
+      }
+    ],
+    "credit": {
+      "name": "RTK",
+      "url": "https://github.com/rtk-ai/rtk"
+    },
+    "sourceImage": "https://raw.githubusercontent.com/rtk-ai/rtk/develop/.github/assets/before-after.png"
+  },
+  "design-dna": {
+    "label": "Creator's example",
+    "caption": "The author's comparison of a page and its measured design tokens.",
+    "images": [
+      {
+        "src": "assets/previews/design-dna-creator.webp",
+        "width": 1280,
+        "height": 566,
+        "label": "Example",
+        "alt": "The author's comparison of a page and its measured design tokens."
+      }
+    ],
+    "credit": {
+      "name": "zanwei/design-dna",
+      "url": "https://github.com/zanwei/design-dna"
+    },
+    "sourceImage": "https://raw.githubusercontent.com/zanwei/design-dna/main/docs/example-deterministic-measurement.png"
+  },
+  "hyperframes": {
+    "label": "Creator's example",
+    "caption": "A still preview of one of HyperFrames' built-in design templates.",
+    "images": [
+      {
+        "src": "assets/previews/hyperframes-creator.webp",
+        "width": 1280,
+        "height": 720,
+        "label": "Example",
+        "alt": "A still preview of one of HyperFrames' built-in design templates."
+      }
+    ],
+    "credit": {
+      "name": "HeyGen / HyperFrames",
+      "url": "https://github.com/heygen-com/hyperframes"
+    },
+    "sourceImage": "https://static.heygen.ai/hyperframes-oss/docs/images/design-templates/blockframe.png"
+  },
+  "motionsites-web-builder": {
+    "label": "Creator's example",
+    "caption": "Design examples shown in the MotionSites skill repository.",
+    "images": [
+      {
+        "src": "assets/previews/motionsites-creator.webp",
+        "width": 1190,
+        "height": 900,
+        "label": "Example",
+        "alt": "Design examples shown in the MotionSites skill repository."
+      }
+    ],
+    "credit": {
+      "name": "MotionSites",
+      "url": "https://github.com/Motionsites-AI/claude-skill"
+    },
+    "sourceImage": "https://raw.githubusercontent.com/Motionsites-AI/claude-skill/main/preview-media.jpg"
+  },
+  "impeccable": {
+    "label": "Creator's example",
+    "caption": "The author's before-and-after example of a website redesign.",
+    "images": [
+      {
+        "src": "assets/previews/impeccable-after.webp",
+        "width": 1280,
+        "height": 792,
+        "label": "After",
+        "alt": "The after design shown in the Impeccable repository."
+      },
+      {
+        "src": "assets/previews/impeccable-before.webp",
+        "width": 1200,
+        "height": 900,
+        "label": "Before",
+        "alt": "The before design shown in the Impeccable repository."
+      }
+    ],
+    "credit": {
+      "name": "Paul Bakaus / Impeccable",
+      "url": "https://github.com/pbakaus/impeccable"
+    }
+  }
+}

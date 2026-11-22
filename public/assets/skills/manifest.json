@@ -107,7 +107,7 @@
     "uploadSize": 512,
     "appSize": 256,
     "transparent": true,
-    "sha256": "fdeb6856b2209e58dd125ca3283c0d94828e6023195eb709c392043d1620cc26"
+    "sha256": "5d4f6e994d3da419e9700c74d16cc80c981c8209951d1900959ffc544da992c4"
   },
   {
     "id": "mobile-native",
@@ -184,7 +184,7 @@
     "uploadSize": 512,
     "appSize": 256,
     "transparent": true,
-    "sha256": "43d06304173cf9869e3e725320db3e43cc587b09a975c37b2c462f4a5ce4ee65"
+    "sha256": "951ced036af6420e24050bf0a69212f6e7222cd7c29b03c2bd9fadd37441d3e2"
   },
   {
     "id": "motion-design",
@@ -514,7 +514,7 @@
     "uploadSize": 512,
     "appSize": 256,
     "transparent": true,
-    "sha256": "2af694d1b7bd6eee418d5740b282509672b5c8f04ec19f9e84b59755dd002dd3"
+    "sha256": "fe5b1266e1a389d676890435f57b9dcb0970ac7157fd7d0e66f64d51a990596e"
   },
   {
     "id": "watch",
@@ -525,7 +525,7 @@
     "uploadSize": 512,
     "appSize": 256,
     "transparent": true,
-    "sha256": "079ceebf6eebc7f7756e579e1fad4b59deae8e4d26fadab90f057200408616e7"
+    "sha256": "4372fa41e841c450af157a873a225c2cbfb1fa43126886bdaa2a2b6b97d019d2"
   },
   {
     "id": "impeccable",
@@ -580,7 +580,7 @@
     "uploadSize": 512,
     "appSize": 256,
     "transparent": true,
-    "sha256": "1a1606119013194e50434f82caecf1941ca88201b6b29c48239a012cc7bc9f2a"
+    "sha256": "1a576e862129819a653283e6a6c160eebc4e8004e450d7f1db475daf2c8eef4d"
   },
   {
     "id": "codex-review",
@@ -591,7 +591,7 @@
     "uploadSize": 512,
     "appSize": 256,
     "transparent": true,
-    "sha256": "79795e7a16258913478b60c8e4a4d551ee8b0320d26c52fbb0294c4eed9c27fd"
+    "sha256": "0a9f40693e993b98f2f76dd8de5a29bcc3851eed9be4c8a5c36d0a64a082478e"
   },
   {
     "id": "diagram-design",
@@ -602,7 +602,7 @@
     "uploadSize": 512,
     "appSize": 256,
     "transparent": true,
-    "sha256": "00c437ba5cd459197c78920a538d35dcf96ec048f7f991e8e40de8cacd8d47ff"
+    "sha256": "6ba1774a568f754bb2fc92730d7678fba0a270447aa22202c5c2954862b93d2c"
   },
   {
     "id": "markitdown",
@@ -613,7 +613,7 @@
     "uploadSize": 512,
     "appSize": 256,
     "transparent": true,
-    "sha256": "ba6782f335635897ac617263a530772c38cccfb2f5b898288513690ce60d2e54"
+    "sha256": "ccb4ae903bbbb34be5f1a08436a4a95a5b35d051bb6e5d32f4c4cf9ccb8955d4"
   },
   {
     "id": "notebooklm",
@@ -624,7 +624,7 @@
     "uploadSize": 512,
     "appSize": 256,
     "transparent": true,
-    "sha256": "14b572352a6fadf94a356552fc25c2fc834e81dfb58ea8aeae05f1c20a558fe0"
+    "sha256": "6999f47516f02ec97babc9b677ed551ce2ffd8c0590e994660eddacfd940bdcf"
   },
   {
     "id": "pick-ui-library",
@@ -635,7 +635,7 @@
     "uploadSize": 512,
     "appSize": 256,
     "transparent": true,
-    "sha256": "9446726f943addf8d907a0028c135e77b18d14e197503c12084a61a1eb64c0e4"
+    "sha256": "af0f9caef2c126df29be7fb332fb626ecd9ae89fe85ca9eeca7e7e89b53818d2"
   },
   {
     "id": "prototype",
@@ -646,7 +646,7 @@
     "uploadSize": 512,
     "appSize": 256,
     "transparent": true,
-    "sha256": "3c2941bd84f50e1694dce9ebd3fe30ad119970cd006a06a42543c73a3b5ac6c3"
+    "sha256": "95fd0972835d2e8743647aa46398f690b66939b0ae05ba8c31f77f40f58d171c"
   },
   {
     "id": "reverse-engineer-anything",
@@ -657,7 +657,7 @@
     "uploadSize": 512,
     "appSize": 256,
     "transparent": true,
-    "sha256": "7529a42a0a534ee5e3b4c1dfacfb310b50b9cca0d3ee3536dd15a5dca3c69dfd"
+    "sha256": "9857ea04ae7d5b238f77887de547cd8eab8c5a59b9f6cd6ef93db8502215b201"
   },
   {
     "id": "slideshow",
@@ -668,7 +668,7 @@
     "uploadSize": 512,
     "appSize": 256,
     "transparent": true,
-    "sha256": "fd5a875b53687935598df266e17642247c216277826a45811437278fa429167c"
+    "sha256": "fdb58aa0c626d108d453d5fc03931f9912e74bc8d18a3046fc0009d92589a172"
   },
   {
     "id": "taste",
@@ -679,7 +679,7 @@
     "uploadSize": 512,
     "appSize": 256,
     "transparent": true,
-    "sha256": "a11406243c5386f43412140adcbc16a60ca1bf9849e110e1b5e0497ecd235458"
+    "sha256": "0e67a2e3c073588b681092d45b25e81f66b41814ca3a03d117ad2b1d83748a0c"
   },
   {
     "id": "ui-ux-pro-max",
@@ -690,7 +690,7 @@
     "uploadSize": 512,
     "appSize": 256,
     "transparent": true,
-    "sha256": "b3c0245155a3d4bfb9dc912263debef1e09b23ca721ecf4080c9b64c70c96368"
+    "sha256": "75b15e5f1afcd0746bf9ef1bfe877980a4b514fc32e4d03f625b22e24bad7d8a"
   },
   {
     "id": "write-swift",
@@ -701,7 +701,7 @@
     "uploadSize": 512,
     "appSize": 256,
     "transparent": true,
-    "sha256": "237591b85ef301e62d8e04f628c4be234702bc6e298df7551c15301906e84e0b"
+    "sha256": "c01c153fae5afeb4961c4cd9e2cc7b62a1a72311cc2f7c89bcc1234ed985eeec"
   },
   {
     "id": "motionsites-web-builder",
@@ -801,5 +801,16 @@
     "appSize": 256,
     "transparent": true,
     "sha256": "f84ad893e9bcf21b75e7b4916ebb9a13c9c076f3dde6ad15ba2789230b1cfecf"
+  },
+  {
+    "id": "econ-agent-skills",
+    "title": "Econ Research Pack",
+    "category": "writing",
+    "png": "econ-agent-skills.png",
+    "webp": "econ-agent-skills.webp",
+    "uploadSize": 512,
+    "appSize": 256,
+    "transparent": true,
+    "sha256": "f6ab43e1475b79155c6d87f8e325730fa93178fccccb199c8b061ca006f3a52f"
   }
 ]

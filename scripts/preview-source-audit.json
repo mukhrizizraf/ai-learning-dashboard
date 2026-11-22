@@ -1,0 +1,175 @@
+{
+  "checkedOn": "2026-11-22",
+  "note": "README raster-image candidates were screened for useful result examples; sample outputs are labelled separately.",
+  "repositories": [
+    {
+      "repository": "JonasWeinert/EconAgentSkills",
+      "readme": "https://raw.githubusercontent.com/JonasWeinert/EconAgentSkills/main/README.md",
+      "candidates": []
+    },
+    {
+      "repository": "heydamir/unslop",
+      "readme": "https://raw.githubusercontent.com/heydamir/unslop/main/README.md",
+      "candidates": [
+        "https://raw.githubusercontent.com/heydamir/unslop/main/skills/unslop/references/refs/story-dashboard-frames.webp"
+      ]
+    },
+    {
+      "repository": "JDhruv14/line-art-animation",
+      "readme": "https://raw.githubusercontent.com/JDhruv14/line-art-animation/main/README.md",
+      "candidates": [
+        "https://raw.githubusercontent.com/JDhruv14/line-art-animation/main/media/day.png",
+        "https://raw.githubusercontent.com/JDhruv14/line-art-animation/main/media/night.png"
+      ]
+    },
+    {
+      "repository": "lemomo-ai/lemo-opuscar",
+      "readme": "https://raw.githubusercontent.com/lemomo-ai/lemo-opuscar/main/README.md",
+      "candidates": [
+        "https://raw.githubusercontent.com/lemomo-ai/lemo-opuscar/main/docs/my-style-before.jpg",
+        "https://raw.githubusercontent.com/lemomo-ai/lemo-opuscar/main/docs/my-style-after.jpg",
+        "https://raw.githubusercontent.com/lemomo-ai/lemo-opuscar/main/docs/readme/station-01-en-light.webp",
+        "https://raw.githubusercontent.com/lemomo-ai/lemo-opuscar/main/docs/readme/station-01-en-dark.webp",
+        "https://raw.githubusercontent.com/lemomo-ai/lemo-opuscar/main/docs/readme/cards/caption-news-poster.webp",
+        "https://raw.githubusercontent.com/lemomo-ai/lemo-opuscar/main/docs/readme/cards/newsreel-poster.webp"
+      ]
+    },
+    {
+      "repository": "DietrichGebert/ponytail",
+      "readme": "https://raw.githubusercontent.com/DietrichGebert/ponytail/main/README.md",
+      "candidates": [
+        "https://raw.githubusercontent.com/DietrichGebert/ponytail/main/assets/stories-banner.png",
+        "https://raw.githubusercontent.com/DietrichGebert/ponytail/main/assets/v5/hero.jpg",
+        "https://raw.githubusercontent.com/DietrichGebert/ponytail/main/assets/waitlist-banner.png",
+        "https://raw.githubusercontent.com/DietrichGebert/ponytail/main/assets/v5/chart.png",
+        "https://raw.githubusercontent.com/DietrichGebert/ponytail/main/assets/v5/tests.png",
+        "https://raw.githubusercontent.com/DietrichGebert/ponytail/main/assets/v5/beforeafter.png"
+      ]
+    },
+    {
+      "repository": "Graphify-Labs/graphify",
+      "readme": "https://raw.githubusercontent.com/Graphify-Labs/graphify/v8/README.md",
+      "candidates": [
+        "https://raw.githubusercontent.com/Graphify-Labs/graphify/v8/docs/graph-hero.png"
+      ]
+    },
+    {
+      "repository": "rtk-ai/rtk",
+      "readme": "https://raw.githubusercontent.com/rtk-ai/rtk/develop/README.md",
+      "candidates": [
+        "https://raw.githubusercontent.com/rtk-ai/rtk/develop/.github/assets/rtk-banner.png",
+        "https://raw.githubusercontent.com/rtk-ai/rtk/develop/.github/assets/companies.png",
+        "https://raw.githubusercontent.com/rtk-ai/rtk/develop/.github/assets/before-after.png",
+        "https://raw.githubusercontent.com/rtk-ai/rtk/develop/.github/assets/go-further.png",
+        "https://raw.githubusercontent.com/rtk-ai/rtk/develop/.github/assets/rtk-pro.png"
+      ]
+    },
+    {
+      "repository": "GoogleChrome/modern-web-guidance",
+      "readme": "https://raw.githubusercontent.com/GoogleChrome/modern-web-guidance/main/README.md",
+      "candidates": []
+    },
+    {
+      "repository": "anthropics/skills",
+      "readme": "https://raw.githubusercontent.com/anthropics/skills/main/README.md",
+      "candidates": []
+    },
+    {
+      "repository": "obra/superpowers",
+      "readme": "https://raw.githubusercontent.com/obra/superpowers/main/README.md",
+      "candidates": []
+    },
+    {
+      "repository": "emilkowalski/skills",
+      "readme": "https://raw.githubusercontent.com/emilkowalski/skills/main/README.md",
+      "candidates": []
+    },
+    {
+      "repository": "greensock/gsap-skills",
+      "readme": "https://raw.githubusercontent.com/greensock/gsap-skills/main/README.md",
+      "candidates": []
+    },
+    {
+      "repository": "zanwei/design-dna",
+      "readme": "https://raw.githubusercontent.com/zanwei/design-dna/main/README.md",
+      "candidates": [
+        "https://raw.githubusercontent.com/zanwei/design-dna/main/docs/example-deterministic-measurement.png"
+      ]
+    },
+    {
+      "repository": "juliobsz/skills",
+      "readme": "https://raw.githubusercontent.com/juliobsz/skills/main/README.md",
+      "candidates": [
+        "https://img.youtube.com/vi/BEcQoDs16IE/maxresdefault.jpg"
+      ]
+    },
+    {
+      "repository": "thedotmack/claude-mem",
+      "readme": "https://raw.githubusercontent.com/thedotmack/claude-mem/main/README.md",
+      "candidates": []
+    },
+    {
+      "repository": "chaseai-yt/claudex-loop",
+      "readme": "https://raw.githubusercontent.com/chaseai-yt/claudex-loop/main/README.md",
+      "candidates": []
+    },
+    {
+      "repository": "heygen-com/hyperframes",
+      "readme": "https://raw.githubusercontent.com/heygen-com/hyperframes/main/README.md",
+      "candidates": [
+        "https://static.heygen.ai/hyperframes-oss/docs/images/design-templates/biennale-yellow.png",
+        "https://static.heygen.ai/hyperframes-oss/docs/images/design-templates/blockframe.png",
+        "https://static.heygen.ai/hyperframes-oss/docs/images/design-templates/blue-professional.png",
+        "https://static.heygen.ai/hyperframes-oss/docs/images/design-templates/bold-poster.png",
+        "https://static.heygen.ai/hyperframes-oss/docs/images/design-templates/broadside.png",
+        "https://static.heygen.ai/hyperframes-oss/docs/images/design-templates/capsule.png"
+      ]
+    },
+    {
+      "repository": "mvanhorn/last30days-skill",
+      "readme": "https://raw.githubusercontent.com/mvanhorn/last30days-skill/main/README.md",
+      "candidates": []
+    },
+    {
+      "repository": "bradautomates/claude-video",
+      "readme": "https://raw.githubusercontent.com/bradautomates/claude-video/main/README.md",
+      "candidates": [
+        "https://raw.githubusercontent.com/bradautomates/claude-video/main/docs/images/install/claude-customize-plugins.png",
+        "https://raw.githubusercontent.com/bradautomates/claude-video/main/docs/images/install/claude-add-repository.png",
+        "https://raw.githubusercontent.com/bradautomates/claude-video/main/docs/images/install/claude-marketplace-url.png"
+      ]
+    },
+    {
+      "repository": "pbakaus/impeccable",
+      "readme": "https://raw.githubusercontent.com/pbakaus/impeccable/main/README.md",
+      "candidates": [
+        "https://github.com/pbakaus/impeccable/raw/main/docs/images/readme-without.webp",
+        "https://github.com/pbakaus/impeccable/raw/main/docs/images/readme-with.webp"
+      ]
+    },
+    {
+      "repository": "microsoft/playwright-mcp",
+      "readme": "https://raw.githubusercontent.com/microsoft/playwright-mcp/main/README.md",
+      "candidates": []
+    },
+    {
+      "repository": "remotion-dev/skills",
+      "readme": "https://raw.githubusercontent.com/remotion-dev/skills/main/README.md",
+      "candidates": []
+    },
+    {
+      "repository": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "readme": "https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/main/README.md",
+      "candidates": [
+        "https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/main/screenshots/website.png"
+      ]
+    },
+    {
+      "repository": "Motionsites-AI/claude-skill",
+      "readme": "https://raw.githubusercontent.com/Motionsites-AI/claude-skill/main/README.md",
+      "candidates": [
+        "https://raw.githubusercontent.com/Motionsites-AI/claude-skill/main/preview-media.jpg"
+      ]
+    }
+  ]
+}

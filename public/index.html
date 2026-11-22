@@ -36,10 +36,13 @@
         "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
     } }
   </script>
-  <script defer src="./skills.js?v=20261121-unslop"></script>
+  <script defer src="./skills.js?v=20261122-examples"></script>
   <script defer src="./toys.js?v=20261113-jury"></script>
-  <script defer src="./skill-images.js?v=20261121-unslop"></script>
-  <script defer src="./skill-images-home.js?v=20261113-art"></script>
+  <script defer src="./skill-images.js?v=20261122-icons"></script>
+  <link rel="stylesheet" href="./skill-previews.css?v=20261122-previews">
+  <script defer src="./preview-data.js?v=20261122-previews"></script>
+  <script defer src="./skill-previews.js?v=20261122-previews"></script>
+  <script defer src="./skill-images-home.js?v=20261122-icons"></script>
 </head>
 <body data-page="home">
   <a class="skip" href="#ch-share">Skip to the shelf link</a>
@@ -164,12 +167,14 @@
       document.getElementById('pop-body').innerHTML = `<div class="pop-in">
         <div class="pop-top"><span class="pop-skill-art" aria-hidden="true">${window.SkillImages?.markup(s.id, false) || cube(s.cat)}</span><div><p class="pop-cat">${esc(label[s.cat])}</p><h2 id="pop-title">${esc(s.title)}</h2></div><button class="close" type="button" data-close aria-label="Close">×</button></div>
         <p class="pop-what">${esc(s.what)}</p>
+        ${window.SkillPreviews?.markup(s.id) || ''}
         <div class="pop-say"><p>“${esc(s.say)}”</p><button class="copy-btn" type="button" data-copy="${esc(s.say)}">Copy</button></div>
         <div class="pop-actions"><a class="pill" href="./shelf.html#skill=${encodeURIComponent(s.id)}">How do I install it?</a></div></div>`;
       popEl.dataset.skill = s.id;
       popEl.classList.remove('closing');
       if (popEl.open) popEl.close();
       popEl.showModal();
+      window.SkillPreviews?.mount(document.getElementById('pop-body'));
     }
     function closePop() {
       if (!popEl.open) return;

@@ -204,7 +204,7 @@
     }
     const block = (code, label) => `<pre class="code">${esc(code)}</pre><div class="code-row"><button class="btn small" type="button" data-copy="${esc(code)}" data-done="${esc(label)}">Copy</button></div>`;
     const ways = i.setup
-      ? i.setup.map(([id, label, note, code]) => [id, label, `<p>${esc(note)}</p>${block(code, 'Copied! Now paste it into a terminal.')}`])
+      ? i.setup.map(([id, label, note, code, done]) => [id, label, `<p>${esc(note)}</p>${block(code, done || 'Copied! Now paste it into a terminal.')}`])
       : i.mcp
       ? [['claude', 'Claude Code', `<p>Needs Node.js and Chrome. Run this in a terminal, then reopen Claude Code. This connects a browser tool.</p>${block(i.mcp.claude, 'Copied! Now paste it into a terminal.')}`],
          ['codex', 'Codex', `<p>Needs Node.js and Chrome. Run this in a terminal, then reopen Codex. Ask it to use the Playwright browser tools.</p>${block(i.mcp.codex, 'Copied! Now paste it into a terminal.')}`]]
@@ -265,6 +265,7 @@
     $('#detail-body').innerHTML = `<div class="sheet">
       <div class="sheet-top">${miniBook(c)}<div><h2 id="d-title">${esc(c.title.charAt(0) + c.title.slice(1).toLowerCase())}</h2><p class="sheet-sub">${c.lessons.length} ideas, each with its clip and the exact prompt or install command</p></div><button class="close" type="button" data-close aria-label="Close">×</button></div>
       <p class="lead">${esc(c.what)}</p>
+      ${window.SkillPreviews?.markup(c.id) || ''}
       <div class="ideas">${c.lessons.map((l, i) => `<article class="idea">
         <div class="idea-head"><span class="idea-n">${i + 1}</span><div><h3>${esc(l.title)}</h3><p class="idea-credit">${credit(l)}</p></div></div>
         ${clip(l)}
@@ -275,6 +276,7 @@
       </article>`).join('')}</div>
       <div class="sheet-foot"><button class="btn" type="button" data-share="${esc(c.id)}">Copy the link, share with friends</button></div></div>`;
     openSheet(c.id, push);
+    window.SkillPreviews?.mount($('#detail-body'));
     // Show the "blocked" note if a clip fails to load.
     $('#detail-body').querySelectorAll('.clip video').forEach(v => {
       const blocked = () => { v.parentElement.querySelector('.clip-blocked').hidden = false; v.parentElement.classList.add('is-blocked'); };
@@ -294,6 +296,7 @@
     $('#detail-body').innerHTML = `<div class="sheet">
       <div class="sheet-top">${miniBook(s)}<div><h2 id="d-title">${esc(s.title)}</h2><p class="sheet-sub">${esc(cats[s.cat].label)}, ${esc(D.levels[s.level].label.toLowerCase())}, from ${esc(src.name)}${isNew(s) ? ', new this month' : ''}</p></div><button class="close" type="button" data-close aria-label="Close">×</button></div>
       <p class="lead">${esc(s.what)}</p>
+      ${window.SkillPreviews?.markup(s.id) || ''}
       <h3>Best for</h3><ul class="uses">${s.useFor.map(u => `<li>${esc(u)}</li>`).join('')}</ul>
       <h3>What to type</h3><div class="say"><p>“${esc(s.say)}”</p><button class="btn primary" type="button" data-copy="${esc(s.say)}">Copy</button></div>
       <p class="note">${esc(D.levels[s.level].hint)} ${src.usageNote ? esc(src.usageNote) : src.mcp ? 'After connecting, ask Claude Code or Codex to use the Playwright browser tools.' : `In Claude Code you can also type <code>/${esc(s.members ? s.members[0][0] : s.id)}</code> to start it right away.`}</p>
@@ -301,6 +304,7 @@
       ${s.members ? `<h3>What's inside this pack</h3><ul class="members">${s.members.map(([n, t]) => `<li><code>/${esc(n)}</code><br>${esc(t)}</li>`).join('')}</ul>` : ''}
       <div class="sheet-foot"><button class="btn" type="button" data-save="${esc(s.id)}" aria-pressed="${saved.has(s.id)}">${saved.has(s.id) ? 'Saved' : 'Save skill'}</button><button class="btn" type="button" data-share="${esc(s.id)}">Share skill</button></div></div>`;
     openSheet(s.id, push);
+    window.SkillPreviews?.mount($('#detail-body'));
   }
   $('#detail').addEventListener('close', () => {
     $('#detail').querySelectorAll('video').forEach(v => v.pause());
